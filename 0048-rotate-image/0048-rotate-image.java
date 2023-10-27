@@ -7,13 +7,11 @@ class Solution {
                a[j][i]=t;
            }
        }
-       for(int i=0;i<a.length;i++){
-         int p=a.length-1;   
+       for(int i=0;i<a.length;i++){  
             for(int j=0;j<a.length/2;j++){
                 int t=a[i][j];
-                a[i][j]=a[i][p];
-                a[i][p]=t;
-                p--;
+                a[i][j]=a[i][a.length-1-j];
+                a[i][a.length-1-j]=t;
             }
         }
     }
