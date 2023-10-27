@@ -1,16 +1,20 @@
 class Solution {
-    public void rotate(int[][] matrix) {
-        int res[][] =new int[matrix.length][matrix.length];
-        for(int i=0;i<matrix.length;i++){
-            for(int j=0;j<matrix.length;j++){
-                res[i][j]=matrix[i][j];
+    public void rotate(int[][] a) {
+       for(int i=0;i<a.length-1;i++){
+           for(int j=i+1;j<a.length;j++){
+               int t=a[i][j];
+               a[i][j]=a[j][i];
+               a[j][i]=t;
+           }
+       }
+       for(int i=0;i<a.length;i++){
+         int p=a.length-1;   
+            for(int j=0;j<a.length/2;j++){
+                int t=a[i][j];
+                a[i][j]=a[i][p];
+                a[i][p]=t;
+                p--;
             }
         }
-        for(int i=0;i<matrix.length;i++){
-            for(int j=0;j<matrix.length;j++){
-                matrix[j][matrix.length-1-i]=res[i][j];
-            }
-        }
-        
     }
 }
