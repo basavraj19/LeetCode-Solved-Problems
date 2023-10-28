@@ -17,9 +17,9 @@ class Solution {
         return res;
     }
     public void solve(int a[][]){
-        for(int i=0;i<a.length-1;i++){
-            if(((a[i+1][0]>=a[i][0])&&(a[i+1][0]<=a[i][1]))||((a[i+1][1]>=a[i][0])&&(a[i+1][1]<=a[i][1]))){
-                a[i+1][0]=Math.min(a[i][0],a[i+1][0]);
+        for(int i=0;i<a.length-1;i++){    
+            if(a[i][1]>=a[i+1][0]){
+                a[i+1][0]=Math.min(a[i+1][0],a[i][0]);
                 a[i+1][1]=Math.max(a[i][1],a[i+1][1]);
             }else
             {
@@ -28,8 +28,8 @@ class Solution {
             }
         }
         int i=a.length-1;
-        if(((a[i][0]>=a[i-1][0])&&(a[i][0]<=a[i-1][1]))||((a[i][1]>=a[i-1][0])&&(a[i][1]<=a[i-1][1]))){
-                ans.add(Math.min(a[i][0],a[i-1][0]));
+        if(a[i-1][1]>=a[i][0]){
+                ans.add(Math.min(a[i-1][0],a[i][0]));
                 ans.add(Math.max(a[i][1],a[i-1][1]));
             }else
             {
