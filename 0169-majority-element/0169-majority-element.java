@@ -4,15 +4,14 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             if(map.containsKey(nums[i])){
                 map.put(nums[i],map.get(nums[i])+1);
+                 if(map.get(nums[i])>nums.length/2)
+               {
+                   return nums[i];
+               }
                 continue;
             }
             map.put(nums[i],1);
         }
-        for(Map.Entry<Integer,Integer> m: map.entrySet()){
-           if(m.getValue()>nums.length/2){
-               return m.getKey();
-           }
-        }
-        return -1;
+        return nums[0];
     }
 }
