@@ -12,6 +12,7 @@ class Solution {
         for(Map.Entry<Integer,Integer> e:map.entrySet()){
             if(e.getValue()>nums.length/3){
                 ans.add(e.getKey());
+                if(ans.size()==2) return ans;
             }
         }
         return ans;
