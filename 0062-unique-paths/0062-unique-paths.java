@@ -1,7 +1,6 @@
 class Solution {
     public int uniquePaths(int m, int n) {
         int arr [][] =new int[m][n];
-        //Arrays.stream(arr).forEach(row -> Arrays.fill(row, -1));
         int r= solve(m,n,0,0,arr);
         return r;
     }
