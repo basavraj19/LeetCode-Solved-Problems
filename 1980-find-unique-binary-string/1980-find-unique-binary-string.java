@@ -1,16 +1,21 @@
 class Solution {
     public String findDifferentBinaryString(String[] nums) {
-        int n=nums.length;
-        HashMap<String,Integer> map= new HashMap<>();
+        HashMap<String,Integer> map=new HashMap<>();
         for(int i=0;i<nums.length;i++){
             map.put(nums[i],i);
         }
-        for(int i=0;i<Math.pow(2,n);i++){
-            String s=Integer.toBinaryString(i);
-            if(!map.containsKey(s)&&s.length()==n){
-                return s; 
+        return solve(nums.length,map,"");
+    }
+    public String solve(int n,HashMap<String,Integer>map,String s){
+        if(s.length()==n){
+            if(!map.containsKey(s)){
+                return s;
             }
+            return "";
         }
-        return "00";
+        String r= solve(n,map,s+'0');
+        if (!r.isEmpty()) return r;
+        return solve(n,map,s+'1');
+        
     }
 }
