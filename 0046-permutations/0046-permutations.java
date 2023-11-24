@@ -1,27 +1,24 @@
 class Solution {
-    public List<List<Integer>> ans =new ArrayList<>();
     public List<List<Integer>> permute(int[] nums) {
-      getAllPermutations(nums,0);
-      return ans;
+        List<List<Integer>> ans=new ArrayList<List<Integer>>();
+        List<Integer> arr=new ArrayList<>();
+        int b[]=new int[nums.length];
+        return solve(nums,b,ans,arr);
     }
-    
-    public void getAllPermutations(int nums[],int j){
-        if(j==nums.length-1){
-            List<Integer> arr =new ArrayList<>();
-            for(int i=0;i<nums.length;i++){
-                arr.add(nums[i]);
+    public List<List<Integer>> solve(int a[],int b[],List<List<Integer>> ans,List<Integer> arr){
+        if(arr.size()==a.length){
+            ans.add(new ArrayList<Integer>(arr));
+            return ans;
+        }
+        for(int i=0;i<a.length;i++){
+            if(b[i]!=1){
+                b[i]=1;
+                arr.add(a[i]);
+                ans=solve(a,b,ans,arr);
+                b[i]=0;
+                arr.remove(arr.size()-1);
             }
-            ans.add(arr);
         }
-        
-        for(int i=j;i<nums.length;i++){
-            int t=nums[i];
-            nums[i]=nums[j];
-            nums[j]=t;
-            getAllPermutations(nums,j+1);
-            t=nums[i];
-            nums[i]=nums[j];
-            nums[j]=t;
-        }
+        return ans;
     }
 }
