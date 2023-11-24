@@ -1,54 +1,49 @@
-public class Solution {
-
+class Solution {
     public int reversePairs(int[] nums) {
-        return mergeSort(nums, 0, nums.length - 1);
+        return merge(nums,0,nums.length-1); 
     }
-
-    private int mergeSort(int[] arr, int low, int high) {
-        int cnt = 0;
-        if (low >= high) return cnt;
-        int mid = (low + high) / 2;
-        cnt += mergeSort(arr, low, mid);
-        cnt += mergeSort(arr, mid + 1, high);
-        cnt += countPairs(arr, low, mid, high);
-        merge(arr, low, mid, high);
-        return cnt;
+    public int merge(int a[],int l,int h){
+        int c=0;
+       if(l>=h) return c;
+        int m=(l+h)/2;
+        c+=merge(a,l,m);
+        c+=merge(a,m+1,h);
+        c+=countPairs(a,l,m,h);
+        a=mergeSort(a,l,m,h);
+        return c;
     }
-
-    private void merge(int[] arr, int low, int mid, int high) {
-        int[] temp = new int[high - low + 1];
-        int left = low;
-        int right = mid + 1;
-        int index = 0;
-
-        while (left <= mid && right <= high) {
-            if (arr[left] <= arr[right]) {
-                temp[index++] = arr[left++];
-            } else {
-                temp[index++] = arr[right++];
+    public int[] mergeSort(int a[],int l,int m,int h){
+        ArrayList<Integer> arr=new ArrayList<Integer>();
+        int i=l,j=m+1;
+        while(i<=m&&j<=h){
+            if(a[i]>a[j]){
+                arr.add(a[j]);
+                j++;
+            }else
+            {
+                arr.add(a[i]);
+                i++;
             }
         }
-
-        while (left <= mid) {
-            temp[index++] = arr[left++];
+        while(i<=m){
+            arr.add(a[i++]);
         }
-
-        while (right <= high) {
-            temp[index++] = arr[right++];
+        while(j<=h){
+            arr.add(a[j++]);
         }
-
-        System.arraycopy(temp, 0, arr, low, temp.length);
-    }
-
-    private int countPairs(int[] arr, int low, int mid, int high) {
-        int right = mid + 1;
-        int cnt = 0;
-        for (int i = low; i <= mid; i++) {
-            while (right <= high && (long) arr[i] > 2L * arr[right]) {
-                right++;
+        for(i=l;i<=h;i++){
+            a[i]=arr.get(i-l);
+        }
+        return a;
+    } 
+    public int countPairs(int a[],int l,int m,int h){
+        int i=l,j=m+1,res=0;
+        for(i=l;i<=m;i++){
+            while(j<=h&&(long)a[i]>(2l*a[j])){
+                j++;
             }
-            cnt += (right - (mid + 1));
+            res+=j-(m+1);
         }
-        return cnt;
+        return res;
     }
 }
