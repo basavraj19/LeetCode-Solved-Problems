@@ -21,7 +21,6 @@ class Solution {
         ListNode r=head;
         int s=q-1;
         while(j<q/2){
-            r=head;
             i=0;
             while(i<s){
                 i++;
@@ -31,7 +30,8 @@ class Solution {
             p.val=r.val;
             r.val=t;
             p=p.next;
-            s--;
+            r=p;
+            s-=2;
             j++;
         }
         return head;
