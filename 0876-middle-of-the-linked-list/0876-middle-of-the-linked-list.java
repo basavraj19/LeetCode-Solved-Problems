@@ -10,11 +10,19 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
-      ArrayList<ListNode> arr=new ArrayList<>();
-      while(head!=null){
-          arr.add(head);
-          head=head.next;
-      }
-      return arr.get((int)Math.ceil(arr.size()/2));
+        int q=0;
+        ListNode t=head;
+        while(t!=null){
+            t=t.next;
+            q++;
+        }
+        int i=0;
+        t=head;
+        q=(q/2);
+        while(i<q){
+            t=t.next;
+            i++;
+        }
+        return t;
     }
 }
