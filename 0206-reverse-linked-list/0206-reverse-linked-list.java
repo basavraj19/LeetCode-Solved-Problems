@@ -11,30 +11,13 @@
 class Solution {
     public ListNode reverseList(ListNode head) {
         if(head==null||head.next==null) return head;
-        ListNode p=head;
-        int q=0,i=0,j=0;
-        while(p!=null){
-            p=p.next;
-            q++;
+        ListNode t=null;
+        while(head!=null){
+            ListNode next=head.next;
+            head.next=t;
+            t=head;
+            head=next;
         }
-        p=head;
-        ListNode r=head;
-        int s=q-1;
-        while(j<q/2){
-            i=0;
-            while(i<s){
-                i++;
-                r=r.next;
-            }
-            int t=p.val;
-            p.val=r.val;
-            r.val=t;
-            p=p.next;
-            r=p;
-            s-=2;
-            j++;
-        }
-        return head;
+        return t;
     }
-    
 }
