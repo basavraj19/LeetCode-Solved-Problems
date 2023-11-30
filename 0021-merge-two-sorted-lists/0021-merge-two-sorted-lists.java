@@ -15,10 +15,13 @@ class Solution {
         if(list2==null) return list1;
         ArrayList<Integer> arr=new ArrayList<>();
         ListNode p=list1;
+        ListNode q=list1;
         while(p!=null){
             arr.add(p.val);
+            q=p;
             p=p.next;
         }
+        q.next=list2;
         p=list2;
         while(p!=null){
             arr.add(p.val);
@@ -27,20 +30,11 @@ class Solution {
         Collections.sort(arr);
         int i=0;
         p=list1;
-        ListNode q=list1;
         while(p!=null){
             p.val=arr.get(i);
             i++;
-            q=p;
-            p=p.next;
+            p=p.next; 
         }
-        q.next=list2;
-        p=list2;
-        while(p!=null){
-            p.val=arr.get(i);
-            i++;
-            p=p.next;
-        }
-       return list1;
+        return list1;
     }
 }
