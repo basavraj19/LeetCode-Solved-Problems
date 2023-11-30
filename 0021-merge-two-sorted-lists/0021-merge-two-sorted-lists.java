@@ -17,7 +17,6 @@ class Solution {
         if(list2==null) return list1;
         ListNode p=list1;
         ListNode q=list2;
-        ListNode r=list1;
         while(p!=null){
             if(p.val>q.val){
                 int t=p.val;
@@ -34,10 +33,13 @@ class Solution {
                 }
                 q=list2;
             }
-            r=p;
             p=p.next;
         }
-         r.next=list2;
+        p=list1;
+        while(p.next!=null){
+            p=p.next;
+        }
+        p.next=list2;
         return list1;
     }
 }
