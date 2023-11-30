@@ -15,26 +15,31 @@ class Solution {
         }
         if(list1==null) return list2;
         if(list2==null) return list1;
-        
         ListNode p=list1;
+        ListNode q=list2;
+        while(p!=null){
+            if(p.val>q.val){
+                int t=p.val;
+                    p.val=q.val;
+                    q.val=t;
+                while(q.next!=null){
+                    if(q.val<q.next.val){
+                        break;
+                    }
+                    t=q.val;
+                    q.val=q.next.val;
+                    q.next.val=t;
+                    q=q.next;
+                }
+                q=list2;
+            }
+            p=p.next;
+        }
+        p=list1;
         while(p.next!=null){
             p=p.next;
         }
         p.next=list2;
-        p=list1;
-        while(p!=null){
-            ListNode q=p;
-            while(q!=null){
-                if(p.val>q.val)
-                {
-                    int t=p.val;
-                    p.val=q.val;
-                    q.val=t;
-                }
-                q=q.next;
-            }
-            p=p.next;
-        }
         return list1;
     }
 }
