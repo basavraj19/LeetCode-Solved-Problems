@@ -17,13 +17,14 @@ class Solution {
         if(list2==null) return list1;
         ListNode p=list1;
         ListNode q=list2;
+        ListNode r=list1;
         while(p!=null){
             if(p.val>q.val){
                 int t=p.val;
                     p.val=q.val;
                     q.val=t;
                 while(q.next!=null){
-                    if(q.val<q.next.val){
+                    if(q.val<=q.next.val){
                         break;
                     }
                     t=q.val;
@@ -33,13 +34,10 @@ class Solution {
                 }
                 q=list2;
             }
+            r=p;
             p=p.next;
         }
-        p=list1;
-        while(p.next!=null){
-            p=p.next;
-        }
-        p.next=list2;
+         r.next=list2;
         return list1;
     }
 }
