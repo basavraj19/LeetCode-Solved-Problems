@@ -1,23 +1,26 @@
 class Solution {
     public boolean isIsomorphic(String s, String t) {
-        Map<Character,Character> map=new HashMap<>();
+        Map<Character,Character> map1=new HashMap<>();
+        Map<Character,Character> map2=new HashMap<>();
+        
         for(int i=0;i<s.length();i++){
-            if(map.containsKey(s.charAt(i))&&(t.charAt(i)!=map.get(s.charAt(i)))){
-                return false;
+            
+            char ch=s.charAt(i);
+            char ch1=t.charAt(i);
+            
+            if(map1.containsKey(ch)){
+              if(map1.get(ch)!=ch1){
+                  return false;
+              }  
             }
-            if(isTaken(map,t.charAt(i),s.charAt(i))){
-                return false;
+            else {
+                if(map2.containsKey(ch1)){
+                    return false;
+                }
+                map1.put(ch,ch1);
+                map2.put(ch1,ch);
             }
-            map.put(s.charAt(i),t.charAt(i));
         }
-               return true;
-    }
-    public boolean isTaken(Map<Character,Character> map,char ch,char ch1){
-        for(Map.Entry<Character,Character>m: map.entrySet()){
-            if(ch==m.getValue()&&m.getKey()!=ch1){
-                return true;
-            }
-        }
-        return false;
+        return true;
     }
 }
