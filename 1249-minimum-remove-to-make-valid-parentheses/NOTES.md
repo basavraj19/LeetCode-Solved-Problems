@@ -1,3 +1,2 @@
-IMP Question
-TC --> O(N)
-SC --> O(N)
+optimal Solution --> TC --> O(N)
+SC --> O(1)
