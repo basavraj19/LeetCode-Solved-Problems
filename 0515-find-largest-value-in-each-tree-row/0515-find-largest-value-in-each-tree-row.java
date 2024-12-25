@@ -18,10 +18,6 @@ class Solution {
         if(root==null){
             return new ArrayList<>();
         }
-        return largestValueInRow(root);
-    }
-    
-    public List<Integer> largestValueInRow(TreeNode root){
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         List<Integer> ans = new ArrayList<>();
