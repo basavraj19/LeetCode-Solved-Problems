@@ -17,7 +17,7 @@ class Solution {
             if (vis[i] != 1) {
                 arr.add(nums[i]);
                 vis[i] = 1;
-                ans = getAllPermutations(nums, vis, arr, ans);
+                getAllPermutations(nums, vis, arr, ans);
                 vis[i] = 0;
                 arr.remove(arr.size() - 1);
             }
