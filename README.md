@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0001-two-sum/) | Easy |
+| [0046-permutations](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0046-permutations/) | Medium |
 | [0053-maximum-subarray](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0053-maximum-subarray/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/0073-set-matrix-zeroes) |
 | [0075-sort-colors](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0075-sort-colors/) | Medium |
@@ -82,4 +83,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2149-rearrange-array-elements-by-sign](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/2149-rearrange-array-elements-by-sign/) | Medium |
+## Backtracking
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0046-permutations](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0046-permutations/) | Medium |
 <!---LeetCode Topics End-->
