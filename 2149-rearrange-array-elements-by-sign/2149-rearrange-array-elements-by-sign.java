@@ -3,19 +3,20 @@ class Solution {
         List<Integer> posList = new ArrayList<>();
         List<Integer> negList = new ArrayList<>();
 
-        for(int i=0;i<nums.length;i++){
-            if(nums[i] > 0) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {
                 posList.add(nums[i]);
-            }else {
+            } else {
                 negList.add(nums[i]);
             }
         }
-       int j=0,k=0;
-        for(int i=0;i<nums.length;i++){
-            if(i%2==0) {
-                nums[i] = posList.get(j++);
-            }else{
-                nums[i] = negList.get(k++);
+
+        int i = 0, j = 0;
+        for (int k = 0; k < nums.length; k++) {
+            if (k % 2 == 0) {
+                nums[k] = posList.get(i++);
+            } else {
+                nums[k] = negList.get(j++);
             }
         }
 
