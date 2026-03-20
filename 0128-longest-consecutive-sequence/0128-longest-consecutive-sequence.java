@@ -3,19 +3,24 @@ class Solution {
         if (nums.length == 0) {
             return 0;
         }
-       Arrays.sort(nums);
-       int lastSmall = nums[0], count = 1, max =1; 
-       for(int i=0;i<nums.length;i++) {
-        if(nums[i] - 1 == lastSmall) {
-            count++;
-            lastSmall = nums[i];
-        }else if(nums[i] != lastSmall) {
-            count = 1;
-            lastSmall = nums[i];
-        }
-         max = Math.max(max, count);
-       }
 
-       return max;
+        int count = 1, max = 1;
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            set.add(nums[i]);
+        }
+
+        for (Integer val : set) {
+            if (!set.contains(val - 1)) {
+                int x = val;
+                count = 0;
+                while (set.contains(x)) {
+                    x++;
+                    count++;
+                    max = Math.max(max, count);
+                }
+            }
+        }
+        return max;
     }
 }
