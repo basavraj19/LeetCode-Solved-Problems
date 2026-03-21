@@ -3,11 +3,13 @@ class Solution {
         int k = 0;
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m[0].length; j++) {
-                if ((i == 0 || j == 0) && m[i][j] == 0) {
-                    k = 1;
-                } else if (m[i][j] == 0) {
-                    m[i][0] = 0;
+                if (m[i][j] == 0) {
                     m[0][j] = 0;
+                    if(i==0) {
+                        k =1;
+                    } else{
+                        m[i][0]=0;
+                    }
                 }
             }
         }
@@ -20,11 +22,13 @@ class Solution {
             }
         }
 
-        if (k == 1) {
+        if (m[0][0] == 0) {
             for (int i = 0; i < m.length; i++) {
                 m[i][0] = 0;
             }
+        }
 
+        if(k==1) {
             for (int i = 0; i < m[0].length; i++) {
                 m[0][i] = 0;
             }
