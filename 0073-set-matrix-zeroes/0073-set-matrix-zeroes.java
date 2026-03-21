@@ -1,28 +1,31 @@
 class Solution {
     public void setZeroes(int[][] m) {
-        int a[][] = new int[m.length][m[0].length];
+        List<Integer> rowZero = new ArrayList<>();
+        List<Integer> colZero = new ArrayList<>();
+
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m[0].length; j++) {
-                a[i][j] = m[i][j];
-            }
-        }
-
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[i].length; j++) {
-                if (a[i][j] == 0) {
-                    solve(m, i, j);
+                if (m[i][j] == 0) {
+                    if (!rowZero.contains(i))
+                        rowZero.add(i);
+                    if (!colZero.contains(j))
+                        colZero.add(j);
                 }
             }
         }
-    }
 
-    public void solve(int m[][], int row, int col) {
-        for (int i = 0; i < m[0].length; i++) {
-            m[row][i] = 0;
+        for (int i = 0; i < rowZero.size(); i++) {
+            int ind = rowZero.get(i);
+            for (int j = 0; j < m[0].length; j++) {
+                m[ind][j] = 0;
+            }
         }
 
-        for (int i = 0; i < m.length; i++) {
-            m[i][col] = 0;
+        for (int i = 0; i < colZero.size(); i++) {
+            int ind = colZero.get(i);
+            for (int j = 0; j < m.length; j++) {
+                m[j][ind] = 0;
+            }
         }
     }
 }
