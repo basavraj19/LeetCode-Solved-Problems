@@ -1,16 +1,19 @@
 class Solution {
     public void rotate(int[][] m) {
-        int res[][] = new int[m.length][m.length];
 
         for (int i = 0; i < m.length; i++) {
-            for (int j = 0; j < m.length; j++) {
-                res[j][m.length - i - 1] = m[i][j];
+            for (int j = 0; j <= i; j++) {
+                int t = m[i][j];
+                m[i][j] = m[j][i];
+                m[j][i] = t;
             }
         }
 
         for (int i = 0; i < m.length; i++) {
-            for (int j = 0; j < m.length; j++) {
-                m[i][j] = res[i][j];
+            for (int j = 0; j < m.length / 2; j++) {
+                int t = m[i][j];
+                m[i][j] = m[i][m.length - 1 - j];
+                m[i][m.length - 1 - j] = t;
             }
         }
     }
