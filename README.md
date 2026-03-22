@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0046-permutations](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0046-permutations/) | Medium |
 | [0048-rotate-image](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0048-rotate-image/) | Medium |
 | [0053-maximum-subarray](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0053-maximum-subarray/) | Medium |
+| [0054-spiral-matrix](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0054-spiral-matrix/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/0073-set-matrix-zeroes) |
 | [0075-sort-colors](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0075-sort-colors/) | Medium |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
@@ -59,6 +60,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0048-rotate-image](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0048-rotate-image/) | Medium |
+| [0054-spiral-matrix](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0054-spiral-matrix/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/0073-set-matrix-zeroes) |
 ## Two Pointers
 | Problem Name | Difficulty |
@@ -88,6 +90,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0054-spiral-matrix](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0054-spiral-matrix/) | Medium |
 | [2149-rearrange-array-elements-by-sign](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/2149-rearrange-array-elements-by-sign/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
