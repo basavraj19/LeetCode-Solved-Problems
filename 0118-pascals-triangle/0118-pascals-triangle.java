@@ -1,23 +1,31 @@
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> ans = new ArrayList<>();
-        ans.add(new ArrayList<Integer>(List.of(1)));
+        ans.add(new ArrayList<>(List.of(1)));
+        if (numRows == 1) {
+            return ans;
+        }
 
         for (int i = 1; i < numRows; i++) {
-            int a[] = new int[i + 1];
-            a[0] = 1;
-            for (int j = 0; j < i / 2; j++) {
-                int nextEle = ans.get(i - 1).get(j) + ans.get(i - 1).get(j + 1);
-                a[j + 1] = nextEle;
-                a[i - j - 1] = nextEle;
+            List<Integer> arr = new ArrayList<>();
+            arr.add(1);
+            for (int j = 1; j < i; j++) {
+                int res = getValue(i, j);
+                arr.add(res);
             }
-            a[i] = 1;
-            List<Integer> list = Arrays.stream(a)
-                    .boxed()
-                    .collect(Collectors.toList());
-            ans.add(list);
+            arr.add(1);
+            ans.add(arr);
         }
 
         return ans;
+    }
+
+    public int getValue(int n, int r) {
+        int res = 1;
+        for (int i = 0; i < r; i++) {
+            res = res * (n - i);
+            res = res / (i + 1);
+        }
+        return res;
     }
 }
