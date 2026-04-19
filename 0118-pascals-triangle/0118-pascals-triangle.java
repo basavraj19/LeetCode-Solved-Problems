@@ -11,10 +11,11 @@ class Solution {
     public List<Integer> solve(int n) {
         List<Integer> arr = new ArrayList<>();
         arr.add(1);
-        int ans = 1;
+        int ans = 1, p = 1, q = 1;
         for (int i = 1; i <= n; i++) {
-            ans = ans * (n - i + 1);
-            ans = ans / i;
+            p = p * (n - i + 1);
+            q = q * i;
+            ans = p / q;
             arr.add(ans);
         }
 
