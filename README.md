@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0001-two-sum/) | Easy |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0031-next-permutation](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0031-next-permutation/) | Medium |
 | [0046-permutations](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0046-permutations/) | Medium |
 | [0048-rotate-image](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0048-rotate-image/) | Medium |
@@ -70,6 +71,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0031-next-permutation](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0031-next-permutation/) | Medium |
 | [0075-sort-colors](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0075-sort-colors/) | Medium |
 | [2149-rearrange-array-elements-by-sign](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/2149-rearrange-array-elements-by-sign/) | Medium |
