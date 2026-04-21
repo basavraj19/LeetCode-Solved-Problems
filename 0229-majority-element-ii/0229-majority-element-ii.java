@@ -1,22 +1,15 @@
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
-
-        if (nums.length == 1) {
-            return new ArrayList<>(Arrays.asList(nums[0]));
-        }
         int e1 = nums[0], e2 = nums[0], ec1 = 0, ec2 = 0;
         List<Integer> ans = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             if (ec1 == 0 && nums[i] != e2) {
-                ec1 = 0;
+                ec1 = 1;
                 e1 = nums[i];
-            }
-            if (ec2 == 0 && nums[i] != e1) {
-                ec2 = 0;
+            } else if (ec2 == 0 && nums[i] != e1) {
+                ec2 = 1;
                 e2 = nums[i];
-            }
-
-            if (e1 == nums[i]) {
+            } else if (e1 == nums[i]) {
                 ec1++;
             } else if (e2 == nums[i]) {
                 ec2++;
@@ -37,11 +30,11 @@ class Solution {
             }
         }
 
-        if (ec1 > nums.length / 3) {
+        if (ec1 > nums.length / 3 && !ans.contains(e1)) {
             ans.add(e1);
         }
 
-        if (ec2 > nums.length / 3) {
+        if (ec2 > nums.length / 3 && !ans.contains(e2)) {
             ans.add(e2);
         }
 
