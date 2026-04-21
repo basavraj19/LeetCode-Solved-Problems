@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0128-longest-consecutive-sequence](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0169-majority-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0189-rotate-array/) | Medium |
+| [0283-move-zeroes](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0283-move-zeroes/) | Easy |
 | [0560-subarray-sum-equals-k](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [1524-string-matching-in-an-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1524-string-matching-in-an-array) |
 | [1752-check-if-array-is-sorted-and-rotated](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1752-check-if-array-is-sorted-and-rotated/) | Easy |
@@ -76,6 +77,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0031-next-permutation](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0031-next-permutation/) | Medium |
 | [0075-sort-colors](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0075-sort-colors/) | Medium |
 | [0189-rotate-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0189-rotate-array/) | Medium |
+| [0283-move-zeroes](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0283-move-zeroes/) | Easy |
 | [2149-rearrange-array-elements-by-sign](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/2149-rearrange-array-elements-by-sign/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
