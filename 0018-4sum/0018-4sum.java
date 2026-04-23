@@ -7,8 +7,9 @@ class Solution {
         for (int i = 0; i < n; i++) {
             if (i > 0 && nums[i] == nums[i - 1])
                 continue;
-            int j = i + 1;
-            while (j < n) {
+            for (int j = i + 1; j < n; j++) {
+                if (j > i + 1 && nums[j] == nums[j - 1])
+                    continue;
                 int k = j + 1, l = n - 1;
                 while (k < l) {
                     long s = (long) nums[i] + nums[j] + nums[k] + nums[l];
@@ -26,9 +27,6 @@ class Solution {
                         k++;
                     }
                 }
-                j++;
-                while (j < n && nums[j] == nums[j - 1])
-                    j++;
             }
         }
         return ans;
