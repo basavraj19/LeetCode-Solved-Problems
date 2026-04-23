@@ -7,10 +7,11 @@ class Solution {
         for (int i = 0; i < n; i++) {
             if (i > 0 && nums[i] == nums[i - 1])
                 continue;
-            for (int j = i + 1; j < n; j++) {
+            int j = i + 1;
+            while (j < n) {
                 int k = j + 1, l = n - 1;
                 while (k < l) {
-                    int s = nums[i] + nums[j] + nums[k] + nums[l];
+                    long s = (long) nums[i] + nums[j] + nums[k] + nums[l];
                     if (s == target) {
                         ans.add(new ArrayList<>(Arrays.asList(nums[i], nums[j], nums[k], nums[l])));
                         k++;
@@ -25,6 +26,7 @@ class Solution {
                         k++;
                     }
                 }
+                j++;
                 while (j < n && nums[j] == nums[j - 1])
                     j++;
             }
