@@ -18,21 +18,9 @@ class Solution {
             }
 
             left = 0;
-            gap = (int) Math.ceil((double) (gap) / 2);
             if (gap == 1)
                 break;
-        }
-
-        left = 0;
-        right = 1;
-        while (right < m + n) {
-            if (nums1[left] > nums1[right]) {
-                int t = nums1[left];
-                nums1[left] = nums1[right];
-                nums1[right] = t;
-            }
-            left++;
-            right++;
+            gap = (int) Math.ceil((double) (gap) / 2);
         }
     }
 }
