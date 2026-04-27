@@ -1,34 +1,38 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int j=0;
-        for(int i=m;i<m+n;i++){
-            nums1[i]=nums2[j];
-            j++;
+        for (int i = 0; i < n; i++) {
+            nums1[m + i] = nums2[i];
         }
-        int gap=(int)Math.ceil((m+n)/2);
-        int l=0,r=gap;
-        while(gap>0){
-            while(r<m+n){
-                if(nums1[l]>nums1[r]){
-                    int t=nums1[l];
-                    nums1[l]=nums1[r];
-                    nums1[r]=t;
+
+        int left = 0, gap = (int) Math.ceil((double) (m + n) / 2), right = 0;
+        while (gap > 0) {
+            right = gap;
+            while (right < m + n) {
+                if (nums1[left] > nums1[right]) {
+                    int t = nums1[left];
+                    nums1[left] = nums1[right];
+                    nums1[right] = t;
                 }
-                l++;r++;
+                left++;
+                right++;
             }
-            gap=(int)Math.ceil(gap/2);
-            l=0;
-            r=gap;
+
+            left = 0;
+            gap = (int) Math.ceil((double) (gap) / 2);
+            if (gap == 1)
+                break;
         }
-        l=0;r=1;
-        while(r<m+n){
-                if(nums1[l]>nums1[r]){
-                    int t=nums1[l];
-                    nums1[l]=nums1[r];
-                    nums1[r]=t;
-                }
-                l++;r++;
+
+        left = 0;
+        right = 1;
+        while (right < m + n) {
+            if (nums1[left] > nums1[right]) {
+                int t = nums1[left];
+                nums1[left] = nums1[right];
+                nums1[right] = t;
             }
-        
+            left++;
+            right++;
+        }
     }
 }
