@@ -9,28 +9,17 @@ class Solution {
             int mid = (start + end) / 2;
             count += mergeSort(nums, start, mid);
             count += mergeSort(nums, mid + 1, end);
-            count += merge(nums, start, mid, end);
+            count += countPairs(nums, start, mid, end);
+            merge(nums, start, mid, end);
         }
 
         return count;
     }
 
-    private int merge(int nums[], int start, int mid, int end) {
-        int count = 0, i = start, j = mid + 1, ind = 0;
+    private void merge(int nums[], int start, int mid, int end) {
+        int i = start, j = mid + 1, ind = 0;
         int temp[] = new int[end - start + 1];
 
-        while (i <= mid && j <= end) {
-            int val = (int) Math.ceil(nums[i] / 2.0);
-            if (val > nums[j]) {
-                count += (mid - i + 1);
-                j++;
-            } else {
-                i++;
-            }
-        }
-
-        i = start;
-        j = mid + 1;
         while (i <= mid && j <= end)
 
         {
@@ -50,6 +39,19 @@ class Solution {
 
         for (i = 0; i < (end - start + 1); i++) {
             nums[start + i] = temp[i];
+        }
+    }
+
+    private int countPairs(int nums[], int start, int mid, int end) {
+        int i = start, j = mid + 1, count = 0;
+        while (i <= mid && j <= end) {
+            int val = (nums[i] + 1) / 2;
+            if (val > nums[j]) {
+                count += (mid - i + 1);
+                j++;
+            } else {
+                i++;
+            }
         }
 
         return count;
