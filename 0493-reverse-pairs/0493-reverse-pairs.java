@@ -21,7 +21,6 @@ class Solution {
         int temp[] = new int[end - start + 1];
 
         while (i <= mid && j <= end)
-
         {
             if (nums[i] > nums[j]) {
                 temp[ind++] = nums[j++];
@@ -43,15 +42,13 @@ class Solution {
     }
 
     private int countPairs(int nums[], int start, int mid, int end) {
-        int i = start, j = mid + 1, count = 0;
-        while (i <= mid && j <= end) {
-            int val = (int) Math.ceil(nums[i]/2.0);
-            if (val > nums[j]) {
-                count += (mid - i + 1);
+        int j = mid + 1, count = 0;
+        for (int i = start; i <= mid; i++) {
+            int val = (int) Math.ceil(nums[i] / 2.0);
+            while (j <= end && val > nums[j]) {
                 j++;
-            } else {
-                i++;
             }
+            count += (j - (mid + 1));
         }
 
         return count;
