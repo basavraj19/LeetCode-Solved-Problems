@@ -1,49 +1,57 @@
 class Solution {
     public int reversePairs(int[] nums) {
-        return merge(nums,0,nums.length-1); 
+        return mergeSort(nums, 0, nums.length - 1);
     }
-    public int merge(int a[],int l,int h){
-        int c=0;
-       if(l>=h) return c;
-        int m=(l+h)/2;
-        c+=merge(a,l,m);
-        c+=merge(a,m+1,h);
-        c+=countPairs(a,l,m,h);
-        a=mergeSort(a,l,m,h);
-        return c;
+
+    private int mergeSort(int nums[], int start, int end) {
+        int count = 0;
+        if (start < end) {
+            int mid = (start + end) / 2;
+            count += mergeSort(nums, start, mid);
+            count += mergeSort(nums, mid + 1, end);
+            count += merge(nums, start, mid, end);
+        }
+
+        return count;
     }
-    public int[] mergeSort(int a[],int l,int m,int h){
-        ArrayList<Integer> arr=new ArrayList<Integer>();
-        int i=l,j=m+1;
-        while(i<=m&&j<=h){
-            if(a[i]>a[j]){
-                arr.add(a[j]);
+
+    private int merge(int nums[], int start, int mid, int end) {
+        int count = 0, i = start, j = mid + 1, ind = 0;
+        int temp[] = new int[end - start + 1];
+
+        while (i <= mid && j <= end) {
+            int val = (int) Math.ceil(nums[i] / 2.0);
+            if (val > nums[j]) {
+                count += (mid - i + 1);
                 j++;
-            }else
-            {
-                arr.add(a[i]);
+            } else {
                 i++;
             }
         }
-        while(i<=m){
-            arr.add(a[i++]);
+
+        i = start;
+        j = mid + 1;
+        while (i <= mid && j <= end)
+
+        {
+            if (nums[i] > nums[j]) {
+                temp[ind++] = nums[j++];
+            } else
+                temp[ind++] = nums[i++];
         }
-        while(j<=h){
-            arr.add(a[j++]);
+
+        while (i <= mid) {
+            temp[ind++] = nums[i++];
         }
-        for(i=l;i<=h;i++){
-            a[i]=arr.get(i-l);
+
+        while (j <= end) {
+            temp[ind++] = nums[j++];
         }
-        return a;
-    } 
-    public int countPairs(int a[],int l,int m,int h){
-        int i=l,j=m+1,res=0;
-        for(i=l;i<=m;i++){
-            while(j<=h&&(long)a[i]>(2l*a[j])){
-                j++;
-            }
-            res+=j-(m+1);
+
+        for (i = 0; i < (end - start + 1); i++) {
+            nums[start + i] = temp[i];
         }
-        return res;
+
+        return count;
     }
 }
