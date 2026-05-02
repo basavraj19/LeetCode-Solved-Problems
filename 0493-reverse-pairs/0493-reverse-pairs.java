@@ -45,7 +45,7 @@ class Solution {
     private int countPairs(int nums[], int start, int mid, int end) {
         int i = start, j = mid + 1, count = 0;
         while (i <= mid && j <= end) {
-            int val = (nums[i] + 1) / 2;
+            int val = (int) Math.ceil(nums[i]/2.0);
             if (val > nums[j]) {
                 count += (mid - i + 1);
                 j++;
