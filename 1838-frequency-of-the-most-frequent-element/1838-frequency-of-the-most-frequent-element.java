@@ -5,10 +5,9 @@ class Solution {
         Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
-            long x = (long)nums[i] * (i - j + 1);
-            while (x - sum > k) {
+           
+            while ((long)nums[i] * (i - j + 1) - sum > k) {
                 sum -= nums[j++];
-                x -=nums[i];
             }
             
             max = Math.max(max, i - j + 1);
