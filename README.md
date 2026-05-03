@@ -29,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0560-subarray-sum-equals-k](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [1524-string-matching-in-an-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1524-string-matching-in-an-array) |
 | [1752-check-if-array-is-sorted-and-rotated](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1752-check-if-array-is-sorted-and-rotated/) | Easy |
+| [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/2149-rearrange-array-elements-by-sign/) | Medium |
 | [2292-counting-words-with-a-given-prefix](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/2292-counting-words-with-a-given-prefix) |
@@ -48,6 +49,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0560-subarray-sum-equals-k](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0560-subarray-sum-equals-k/) | Medium |
+| [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2358-number-of-ways-to-split-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/2358-number-of-ways-to-split-array) |
@@ -100,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0088-merge-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0088-merge-sorted-array/) | Easy |
 | [0169-majority-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0169-majority-element/) | Easy |
 | [0229-majority-element-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0229-majority-element-ii/) | Medium |
+| [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -140,6 +143,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0493-reverse-pairs](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0493-reverse-pairs/) | Hard |
+| [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
 ## Binary Indexed Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -156,4 +160,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0493-reverse-pairs](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0493-reverse-pairs/) | Hard |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
+## Sliding Window
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
 <!---LeetCode Topics End-->
