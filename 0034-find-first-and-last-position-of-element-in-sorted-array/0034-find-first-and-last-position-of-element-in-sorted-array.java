@@ -20,7 +20,7 @@ class Solution {
             if (nums[mid] == target) {
                 i = mid + 1;
                 ans[1] = mid;
-            } else if (nums[i] < target) {
+            } else if (nums[mid] < target) {
                 i = mid + 1;
             } else {
                 j = mid - 1;
