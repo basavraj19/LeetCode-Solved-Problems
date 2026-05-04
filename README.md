@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0018-4sum](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0018-4sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0031-next-permutation](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0031-next-permutation/) | Medium |
+| [0035-search-insert-position](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0035-search-insert-position/) | Easy |
 | [0046-permutations](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0046-permutations/) | Medium |
 | [0048-rotate-image](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0048-rotate-image/) | Medium |
 | [0053-maximum-subarray](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0053-maximum-subarray/) | Medium |
@@ -143,6 +144,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0035-search-insert-position](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0035-search-insert-position/) | Easy |
 | [0493-reverse-pairs](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0493-reverse-pairs/) | Hard |
 | [0704-binary-search](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0704-binary-search/) | Easy |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
