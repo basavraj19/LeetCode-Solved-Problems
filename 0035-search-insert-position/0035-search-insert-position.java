@@ -12,10 +12,6 @@ class Solution {
             }
         }
 
-        i = Math.min(i, j);
-        if (i == -1) {
-            i = 0;
-        }
-        return nums[i] > target ? i : i + 1;
+        return i;
     }
 }
