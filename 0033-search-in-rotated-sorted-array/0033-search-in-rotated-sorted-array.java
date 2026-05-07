@@ -11,7 +11,7 @@ class Solution {
                 } else {
                     i = mid + 1;
                 }
-            } else if (nums[mid] <= nums[j]) {
+            } else {
                 if (target > nums[mid] && target <= nums[j]) {
                     i = mid + 1;
                 } else {
