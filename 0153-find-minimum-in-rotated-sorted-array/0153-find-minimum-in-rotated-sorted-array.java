@@ -6,7 +6,7 @@ class Solution {
             if (nums[i] <= nums[j]) {
                 return Math.min(ans, nums[i]);
             } else if (nums[i] <= nums[mid]) {
-               // ans = Math.min(ans, nums[i]);
+                ans = Math.min(ans, nums[i]);
                 i = mid + 1;
             } else {
                 ans = Math.min(ans, nums[mid]);
