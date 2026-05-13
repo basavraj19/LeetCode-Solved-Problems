@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0229-majority-element-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0229-majority-element-ii/) | Medium |
 | [0283-move-zeroes](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0283-move-zeroes/) | Easy |
 | [0493-reverse-pairs](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0493-reverse-pairs/) | Hard |
+| [0540-single-element-in-a-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0704-binary-search](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0704-binary-search/) | Easy |
 | [1524-string-matching-in-an-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1524-string-matching-in-an-array) |
@@ -154,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
 | [0493-reverse-pairs](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0493-reverse-pairs/) | Hard |
+| [0540-single-element-in-a-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
 | [0704-binary-search](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0704-binary-search/) | Easy |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
 ## Binary Indexed Tree
