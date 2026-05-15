@@ -26,6 +26,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0152-maximum-product-subarray](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0152-maximum-product-subarray/) | Medium |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
+| [0162-find-peak-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0162-find-peak-element/) | Medium |
 | [0169-majority-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0189-rotate-array/) | Medium |
 | [0229-majority-element-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0229-majority-element-ii/) | Medium |
@@ -154,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0035-search-insert-position](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0035-search-insert-position/) | Easy |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
+| [0162-find-peak-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0162-find-peak-element/) | Medium |
 | [0493-reverse-pairs](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0493-reverse-pairs/) | Hard |
 | [0540-single-element-in-a-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
 | [0704-binary-search](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0704-binary-search/) | Easy |
