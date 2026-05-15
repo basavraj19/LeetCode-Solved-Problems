@@ -20,12 +20,10 @@ class Solution {
                 return mid;
             }
 
-            if (nums[mid] > nums[mid + 1]) {
+            if (nums[mid] < nums[mid + 1]) {
+                i = mid + 1;
+            } else if (nums[mid] < nums[mid - 1]) {
                 j = mid - 1;
-            } else if (nums[mid] > nums[mid - 1]) {
-                i = mid + 1;
-            } else {
-                i = mid + 1;
             }
         }
 
