@@ -1,37 +1,40 @@
 class Solution {
-    public void nextPermutation(int[] nums) {
-        int ind = -1;
-        for(int i=nums.length-1;i>0;i--) {
-            if(nums[i-1] < nums[i]) {
-                ind = i-1;
+    public void nextPermutation(int[] temp) {
+        int c = 0;
+        for (int i = temp.length - 1; i > 0; i--) {
+            if (temp[i] > temp[i - 1]) {
+                int ind = findImmediateGreater(temp, i-1);
+                int t = temp[i-1];
+                temp[i-1] = temp[ind];
+                temp[ind] = t;
+                reverse(temp, i, temp.length - 1);
+                c++;
                 break;
             }
         }
 
-        if(ind == -1) {
-            reverse(nums, 0, nums.length-1);
-            return;
+        if (c == 0) {
+            reverse(temp, 0, temp.length - 1);
         }
-
-        for(int i=nums.length-1;i>ind;i--) {
-            if(nums[i] > nums[ind]) {
-                int t= nums[i];
-                nums[i] = nums[ind];
-                nums[ind] = t;
-                break;
-            }
-        }
-
-        reverse(nums, ind+1, nums.length-1);
     }
 
-    public void reverse(int nums[], int i, int j) {
-        while (i <= j) {
-            int t = nums[i];
-            nums[i] = nums[j];
-            nums[j] = t;
-            i++;
-            j--;
+    public int findImmediateGreater(int temp[], int ind) {
+        int ans = -1;
+        for (int i = ind; i < temp.length; i++) {
+            if (temp[i] > temp[ind]) {
+                ans = i;
+            }
+        }
+        return ans;
+    }
+
+    public void reverse(int temp[], int start, int end) {
+        while (start <= end) {
+            int t = temp[start];
+            temp[start] = temp[end];
+            temp[end] = t;
+            start++;
+            end--;
         }
     }
 }
