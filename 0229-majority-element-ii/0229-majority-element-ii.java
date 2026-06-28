@@ -4,14 +4,12 @@ class Solution {
 
         for (int i = 0; i < nums.length; i++) {
             if (c1 == 0 && nums[i] != e2) {
+                c1++;
                 e1 = nums[i];
-            }
-
-            if (c2 == 0 && nums[i] != e1) {
+            } else if (c2 == 0 && nums[i] != e1) {
+                c2++;
                 e2 = nums[i];
-            }
-
-            if (nums[i] == e1) {
+            } else if (nums[i] == e1) {
                 c1++;
             } else if (nums[i] == e2) {
                 c2++;
