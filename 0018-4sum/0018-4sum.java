@@ -1,34 +1,25 @@
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
-        int n = nums.length;
-        Arrays.sort(nums);
         List<List<Integer>> ans = new ArrayList<>();
-
+        int n = nums.length;
         for (int i = 0; i < n; i++) {
-            if (i > 0 && nums[i] == nums[i - 1])
-                continue;
             for (int j = i + 1; j < n; j++) {
-                if (j > i + 1 && nums[j] == nums[j - 1])
-                    continue;
-                int k = j + 1, l = n - 1;
-                while (k < l) {
-                    long s = (long) nums[i] + nums[j] + nums[k] + nums[l];
-                    if (s == target) {
-                        ans.add(new ArrayList<>(Arrays.asList(nums[i], nums[j], nums[k], nums[l])));
-                        k++;
-                        l--;
-                        while (k < l && nums[k] == nums[k - 1])
-                            k++;
-                        while (k < l && nums[l] == nums[l + 1])
-                            l--;
-                    } else if (s > target) {
-                        l--;
-                    } else {
-                        k++;
+                Map<Long, Integer> map = new HashMap<>();
+                for (int k = j + 1; k < n; k++) {
+                    Long s = (long) nums[i] + nums[j] + nums[k];
+                    long val = (long) target - s;
+                    if (map.containsKey(val)) {
+                        List<Integer> arr = new ArrayList<>(Arrays.asList(nums[i], nums[j], nums[k], (int) val));
+                        Collections.sort(arr);
+                        if (!ans.contains(arr)) {
+                            ans.add(arr);
+                        }
                     }
+                    map.put((long)nums[k], k);
                 }
             }
         }
+
         return ans;
     }
 }
