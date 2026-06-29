@@ -11,7 +11,7 @@ class Solution {
                     long val = (long) target - s;
                     if (map.containsKey(val)) {
                         List<Integer> arr = new ArrayList<>(Arrays.asList(nums[i], nums[j], nums[k], (int) val));
-                        if (!ans.contains(arr)) {
+                        if (ans.indexOf(arr) == -1) {
                             ans.add(arr);
                         }
                     }
