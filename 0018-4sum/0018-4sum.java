@@ -14,7 +14,7 @@ class Solution {
                 int k = j + 1, l = n;
 
                 while (k < l) {
-                    long sum = (long)nums[i] + nums[j] + nums[k] + nums[l];
+                    long sum = (long) nums[i] + nums[j] + nums[k] + nums[l];
                     if (sum == target) {
                         ans.add(new ArrayList<>(Arrays.asList(nums[i], nums[j], nums[k], nums[l])));
                         while (k < l && nums[k] == nums[k + 1]) {
@@ -27,14 +27,8 @@ class Solution {
                         k++;
                         l--;
                     } else if (target > sum) {
-                        while (k < l && nums[k] == nums[k + 1]) {
-                            k++;
-                        }
                         k++;
                     } else {
-                        while (l > k && nums[l] == nums[l - 1]) {
-                            l--;
-                        }
                         l--;
                     }
                 }
