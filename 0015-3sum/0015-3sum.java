@@ -20,14 +20,8 @@ class Solution {
                     }
                     k--;
                 } else if (sum < 0) {
-                    while (j < k && nums[j] == nums[j + 1]) {
-                        j++;
-                    }
                     j++;
                 } else {
-                    while (k > j && nums[k] == nums[k - 1]) {
-                        k--;
-                    }
                     k--;
                 }
             }
