@@ -6,13 +6,13 @@ class Solution {
             if (nums[mid] == target) {
                 return mid;
             } else if (nums[i] <= nums[mid]) {
-                if (target >= nums[i] && target < nums[mid]) {
+                if (target >= nums[i] && target <= nums[mid]) {
                     j = mid - 1;
                 } else {
                     i = mid + 1;
                 }
             } else {
-                if (target > nums[mid] && target <= nums[j]) {
+                if (target >= nums[mid] && target <= nums[j]) {
                     i = mid + 1;
                 } else {
                     j = mid - 1;
