@@ -32,26 +32,18 @@ class Solution {
     }
 
     public boolean isBouquteFormed(int a[], int mid, int m, int k) {
-        int ans = 0, i = 0;
-        while (i <= a.length - k) {
-            int adjCount = 0;
-            for (int j = i; j < i + k; j++) {
-                if (a[j] <= mid) {
-                    adjCount++;
-                } else {
-                    break;
+        int ans = 0, c = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] <= mid) {
+                c++;
+                if (c == k) {
+                    c = 0;
+                    ans++;
                 }
-            }
-            if (adjCount >= k) {
-                ans++;
-                if (ans >= m) {
-                    return true;
-                }
-                i = i + k;
             } else {
-                i++;
+                c = 0;
             }
         }
-        return false;
+        return ans >= m ? true : false;
     }
 }
