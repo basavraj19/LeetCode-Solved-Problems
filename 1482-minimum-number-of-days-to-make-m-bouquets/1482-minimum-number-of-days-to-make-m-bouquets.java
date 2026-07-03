@@ -18,12 +18,8 @@ class Solution {
                     flowerCount++;
                 }
             }
-            if (flowerCount >= noOfFlowerRequired) {
-                if (isBouquteFormed(bloomDay, mid, m, k)) {
-                    high = mid - 1;
-                } else {
-                    low = mid + 1;
-                }
+            if (isBouquteFormed(bloomDay, mid, m, k)) {
+                high = mid - 1;
             } else {
                 low = mid + 1;
             }
