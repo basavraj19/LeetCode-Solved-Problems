@@ -1,45 +1,44 @@
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
-        long noOfFlowerRequired = (long) m * k;
-        int noOfFlowersAvaliable = bloomDay.length;
-        if (noOfFlowerRequired > noOfFlowersAvaliable) {
+        long flowerReqToMakeMBoq = (long) m * k;
+        if (flowerReqToMakeMBoq > (long) bloomDay.length) {
             return -1;
         }
+
         int low = 0, high = 0;
-        for (int i = 0; i < noOfFlowersAvaliable; i++) {
+        for (int i = 0; i < bloomDay.length; i++) {
             low = Math.min(low, bloomDay[i]);
             high = Math.max(high, bloomDay[i]);
         }
 
         while (low <= high) {
-            int flowerCount = 0, mid = low + (high - low) / 2;
-            for (int i = 0; i < noOfFlowersAvaliable; i++) {
-                if (bloomDay[i] <= mid) {
-                    flowerCount++;
-                }
-            }
-            if (isBouquteFormed(bloomDay, mid, m, k)) {
+            int mid = (low + high) / 2;
+            if (isBouquetFormed(bloomDay, mid, m, k)) {
                 high = mid - 1;
             } else {
                 low = mid + 1;
             }
         }
+
         return low;
     }
 
-    public boolean isBouquteFormed(int a[], int mid, int m, int k) {
-        int ans = 0, c = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] <= mid) {
-                c++;
-                if (c == k) {
-                    c = 0;
-                    ans++;
+    public boolean isBouquetFormed(int bloomDay[], int mid, int m, int k) {
+        int count = 0;
+        for (int i = 0; i < bloomDay.length; i++) {
+            if (bloomDay[i] <= mid) {
+                count++;
+                if (count == k) {
+                    m--;
+                    count = 0;
+                    if (m == 0) {
+                        return true;
+                    }
                 }
             } else {
-                c = 0;
+                count = 0;
             }
         }
-        return ans >= m ? true : false;
+        return false;
     }
 }
