@@ -28,7 +28,10 @@ class Solution {
             }
         }
 
-        ans++;
+        if (capacity <= val) {
+            ans++;
+        }
+        
         if (ans <= days) {
             return true;
         }
