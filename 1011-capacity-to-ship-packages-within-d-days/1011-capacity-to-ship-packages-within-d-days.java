@@ -8,7 +8,8 @@ class Solution {
 
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if (possibleToShip(weights, days, mid)) {
+            int daysRequired = noOfDaysRequired(weights, mid);
+            if (daysRequired <= days) {
                 high = mid - 1;
             } else {
                 low = mid + 1;
@@ -17,24 +18,16 @@ class Solution {
         return low;
     }
 
-    public boolean possibleToShip(int weights[], int days, int val) {
-        int ans = 0, capacity = 0;
+    public int noOfDaysRequired(int weights[], int val) {
+        int ans = 1, capacity = 0;
         for (int i = 0; i < weights.length; i++) {
-            capacity += weights[i];
-
-            if (capacity > val) {
+            if (capacity + weights[i] > val) {
                 capacity = weights[i];
                 ans++;
+            } else {
+                capacity += weights[i];
             }
         }
-
-        if (capacity <= val) {
-            ans++;
-        }
-        
-        if (ans <= days) {
-            return true;
-        }
-        return false;
+        return ans;
     }
 }
