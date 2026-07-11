@@ -6,7 +6,7 @@ class Solution {
         }
         i = 1;
         while (i <= j) {
-            int mid = (i + j) / 2, count = 0;
+            int mid = i + (j - i) / 2, count = 0;
             for (int k = 0; k < piles.length; k++) {
                 count += Math.ceil((double) piles[k] / mid);
             }
