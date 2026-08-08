@@ -55,6 +55,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1021-remove-outermost-parentheses](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1021-remove-outermost-parentheses/) | Easy |
 | [1524-string-matching-in-an-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1524-string-matching-in-an-array) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/2059-unique-length-3-palindromic-subsequences) |
@@ -208,8 +209,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0042-trapping-rain-water](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0042-trapping-rain-water/) | Hard |
+| [1021-remove-outermost-parentheses](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1021-remove-outermost-parentheses/) | Easy |
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0042-trapping-rain-water](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0042-trapping-rain-water/) | Hard |
+## Bracket Sequences
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1021-remove-outermost-parentheses](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1021-remove-outermost-parentheses/) | Easy |
 <!---LeetCode Topics End-->
