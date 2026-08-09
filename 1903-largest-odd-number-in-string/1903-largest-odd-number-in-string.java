@@ -7,7 +7,7 @@ class Solution {
             if (!(ch == '1' || ch == '3' || ch == '5' || ch == '7' || ch == '9')) {
                 continue;
             }
-            ans = getMax(ans, str);
+           ans = str; 
         }
         return ans;
     }
