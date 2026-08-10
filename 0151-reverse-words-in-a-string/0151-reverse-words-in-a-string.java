@@ -1,24 +1,28 @@
 class Solution {
     public String reverseWords(String s) {
-        String ans = "", arr = "";
+        StringBuilder ans = new StringBuilder();
+        StringBuilder arr = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == ' ') {
-                if (ans.length() > 0 && arr.length() > 0) {
-                    ans = " " + ans;
+                if (arr.length() > 0) {
+                    if (ans.length() > 0) {
+                        ans.insert(0, " ");
+                    }
+                    ans.insert(0, arr);
                 }
-                ans = arr + ans;
-                arr = "";
+                arr = new StringBuilder();
                 continue;
             }
-            arr += s.charAt(i);
+            arr.append(s.charAt(i));
         }
 
-        if (ans.length() > 0 && arr.length() > 0) {
-            ans = " " + ans;
+        if (arr.length() > 0) {
+            if (ans.length() > 0) {
+                ans.insert(0, " ");
+            }
+            ans.insert(0, arr);
         }
 
-        ans = arr + ans;
-
-        return ans;
+        return ans.toString();
     }
 }
