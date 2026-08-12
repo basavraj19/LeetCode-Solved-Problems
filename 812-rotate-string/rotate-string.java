@@ -4,10 +4,13 @@ class Solution {
             return false;
         }
 
+        StringBuilder ans = new StringBuilder();
+        ans.append(s);
         for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(0);
-            s = s.substring(1, s.length()) + s.charAt(0);
-            if (s.equals(goal)) {
+            ans.append(ans.charAt(0));
+            ans.deleteCharAt(0);
+
+            if (ans.toString().equals(goal)) {
                 return true;
             }
         }
