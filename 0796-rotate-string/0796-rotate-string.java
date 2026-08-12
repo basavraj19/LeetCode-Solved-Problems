@@ -4,14 +4,8 @@ class Solution {
             return false;
         }
 
-        s = s + s;
+        s += s;
 
-        for (int i = 0; i < goal.length(); i++) {
-            String str = s.substring(i, i + goal.length());
-            if (str.equals(goal)) {
-                return true;
-            }
-        }
-        return false;
+        return s.contains(goal);
     }
 }
