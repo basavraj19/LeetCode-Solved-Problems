@@ -6,16 +6,8 @@ class Solution {
 
         int arr[] = new int[26];
         for (int i = 0; i < s.length(); i++) {
-            int ind = (int) s.charAt(i) - 'a';
-            arr[ind] += 1;
-        }
-
-        for (int i = 0; i < t.length(); i++) {
-            int ind = (int) t.charAt(i) - 'a';
-            if (arr[ind] == 0) {
-                return false;
-            }
-            arr[ind] = arr[ind] - 1;
+            arr[(int) s.charAt(i) - 'a']++;
+            arr[(int) t.charAt(i) - 'a']--;
         }
 
         for (int i = 0; i < arr.length; i++) {
