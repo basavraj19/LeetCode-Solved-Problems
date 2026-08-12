@@ -59,6 +59,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0014-longest-common-prefix](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0014-longest-common-prefix/) | Easy |
 | [0151-reverse-words-in-a-string](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0151-reverse-words-in-a-string/) | Medium |
 | [0205-isomorphic-strings](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0205-isomorphic-strings/) | Easy |
+| [0242-valid-anagram](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0242-valid-anagram/) | Easy |
 | [0796-rotate-string](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0796-rotate-string/) | Easy |
 | [1021-remove-outermost-parentheses](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1021-remove-outermost-parentheses/) | Easy |
 | [1524-string-matching-in-an-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1524-string-matching-in-an-array) |
@@ -87,6 +88,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0169-majority-element/) | Easy |
 | [0205-isomorphic-strings](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0205-isomorphic-strings/) | Easy |
 | [0229-majority-element-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0229-majority-element-ii/) | Medium |
+| [0242-valid-anagram](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0242-valid-anagram/) | Easy |
 | [0560-subarray-sum-equals-k](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/2059-unique-length-3-palindromic-subsequences) |
 ## Bit Manipulation
@@ -131,6 +133,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0088-merge-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0088-merge-sorted-array/) | Easy |
 | [0169-majority-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0169-majority-element/) | Easy |
 | [0229-majority-element-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0229-majority-element-ii/) | Medium |
+| [0242-valid-anagram](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0242-valid-anagram/) | Easy |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
