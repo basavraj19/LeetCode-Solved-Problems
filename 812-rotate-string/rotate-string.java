@@ -4,13 +4,11 @@ class Solution {
             return false;
         }
 
-        StringBuilder ans = new StringBuilder();
-        ans.append(s);
-        for (int i = 0; i < s.length(); i++) {
-            ans.append(ans.charAt(0));
-            ans.deleteCharAt(0);
+        s = s + s;
 
-            if (ans.toString().equals(goal)) {
+        for (int i = 0; i < goal.length(); i++) {
+            String str = s.substring(i, i + goal.length());
+            if (str.equals(goal)) {
                 return true;
             }
         }
