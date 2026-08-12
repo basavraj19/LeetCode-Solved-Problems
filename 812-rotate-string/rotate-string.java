@@ -6,21 +6,19 @@ class Solution {
         }
         int n = s.length();
 
-        for (int rotation = 0; rotation < n; rotation++) {
+        for (int i = 0; i < n; i++) {
             boolean flag = true;
-            for (int i = 0; i < n; i++) {
-                if (goal.charAt((i + rotation) % n) != s.charAt(i)) {
+            for (int j = 0; j < n; j++) {
+                if (s.charAt(j) != goal.charAt((i + j) % n)) {
                     flag = false;
                     break;
                 }
             }
 
-            if (flag)
+            if (flag) {
                 return true;
-
+            }
         }
-
         return false;
-
     }
 }
