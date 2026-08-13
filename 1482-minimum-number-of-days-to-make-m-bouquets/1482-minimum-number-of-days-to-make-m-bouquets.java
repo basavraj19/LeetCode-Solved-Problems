@@ -1,7 +1,7 @@
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
-        long flowerReqToMakeMBoq = (long) m * k;
-        if (flowerReqToMakeMBoq > (long) bloomDay.length) {
+        long noOfflowersRequired = (long) m * k;
+        if (noOfflowersRequired > bloomDay.length) {
             return -1;
         }
 
@@ -12,8 +12,8 @@ class Solution {
         }
 
         while (low <= high) {
-            int mid = (low + high) / 2;
-            if (isBouquetFormed(bloomDay, mid, m, k)) {
+            int mid = low + (high - low) / 2;
+            if (isbouquetFormed(bloomDay, mid, m, k)) {
                 high = mid - 1;
             } else {
                 low = mid + 1;
@@ -23,22 +23,24 @@ class Solution {
         return low;
     }
 
-    public boolean isBouquetFormed(int bloomDay[], int mid, int m, int k) {
-        int count = 0;
+    public boolean isbouquetFormed(int bloomDay[], int mid, int m, int k) {
+        int count = 0, p = 0;
         for (int i = 0; i < bloomDay.length; i++) {
             if (bloomDay[i] <= mid) {
                 count++;
                 if (count == k) {
-                    m--;
+                    p++;
                     count = 0;
-                    if (m == 0) {
-                        return true;
-                    }
                 }
             } else {
                 count = 0;
             }
         }
+
+        if (p >= m) {
+            return true;
+        }
+
         return false;
     }
 }
