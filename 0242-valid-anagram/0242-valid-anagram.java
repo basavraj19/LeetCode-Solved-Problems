@@ -4,17 +4,18 @@ class Solution {
             return false;
         }
 
-        int arr[] = new int[26];
+        int a[] = new int[26];
         for (int i = 0; i < s.length(); i++) {
-            arr[(int) s.charAt(i) - 'a']++;
-            arr[(int) t.charAt(i) - 'a']--;
+            a[s.charAt(i) - 'a']++;
+            a[t.charAt(i) - 'a']--;
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != 0) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != 0) {
                 return false;
             }
         }
+
         return true;
     }
 }
