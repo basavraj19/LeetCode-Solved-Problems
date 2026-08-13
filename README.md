@@ -45,6 +45,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1283-find-the-smallest-divisor-given-a-threshold/) | Medium |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1482-minimum-number-of-days-to-make-m-bouquets/) | Medium |
 | [1524-string-matching-in-an-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1524-string-matching-in-an-array) |
+| [1539-kth-missing-positive-number](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1539-kth-missing-positive-number/) | Easy |
 | [1752-check-if-array-is-sorted-and-rotated](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1752-check-if-array-is-sorted-and-rotated/) | Easy |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
@@ -193,6 +194,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1011-capacity-to-ship-packages-within-d-days/) | Medium |
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1283-find-the-smallest-divisor-given-a-threshold/) | Medium |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1482-minimum-number-of-days-to-make-m-bouquets/) | Medium |
+| [1539-kth-missing-positive-number](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1539-kth-missing-positive-number/) | Easy |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/1838-frequency-of-the-most-frequent-element/) | Medium |
 ## Binary Indexed Tree
 | Problem Name | Difficulty |
