@@ -4,33 +4,15 @@ class Solution {
             return strs[0];
         }
 
-        int n = Integer.MAX_VALUE;
-        for (int i = 0; i < strs.length; i++) {
-            n = Math.min(n, strs[i].length());
-        }
-
         StringBuilder ans = new StringBuilder();
+        ans.append(strs[0]);
 
-        if (n == 0) {
-            return ans.toString();
+        for (int i = 1; i < strs.length; i++) {
+            while (strs[i].indexOf(ans.toString()) != 0) {
+                ans.deleteCharAt(ans.length() - 1);
+            }
         }
 
-        for (int i = 0; i < n; i++) {
-            boolean flag = false;
-            char ch = strs[0].charAt(i);
-            for (int j = 1; j < strs.length; j++) {
-                if (ch != strs[j].charAt(i)) {
-                    flag = true;
-                    break;
-                }
-            }
-
-            if (flag) {
-                return ans.toString();
-            }
-
-            ans.append(ch);
-        }
         return ans.toString();
     }
 }
