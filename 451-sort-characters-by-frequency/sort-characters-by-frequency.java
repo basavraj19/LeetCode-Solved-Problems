@@ -1,22 +1,23 @@
 class Solution {
     public String frequencySort(String s) {
-        int a[][] = new int[256][2];
         StringBuilder ans = new StringBuilder();
+        int a[][] = new int[123][2];
 
         for (int i = 0; i < s.length(); i++) {
-            int k = (int) s.charAt(i);
-            a[k][0] = k;
-            a[k][1]++;
+            int asciiCode = (int) s.charAt(i);
+            a[asciiCode][0] = asciiCode;
+            a[asciiCode][1]++;
         }
 
         Arrays.sort(a, (p, q) -> Integer.compare(q[1], p[1]));
 
-        int j = 0;
-        while (a[j][1] != 0) {
-            for (int i = 0; i < a[j][1]; i++) {
-                ans.append((char) a[j][0]);
+        for (int i = 0; i < 123; i++) {
+            if (a[i][1] == 0) {
+                break;
             }
-            j++;
+            for (int j = 0; j < a[i][1]; j++) {
+                ans.append((char) a[i][0]);
+            }
         }
 
         return ans.toString();
