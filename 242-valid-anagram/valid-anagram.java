@@ -10,7 +10,7 @@ class Solution {
             a[t.charAt(i) - 'a']--;
         }
 
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i < 26; i++) {
             if (a[i] != 0) {
                 return false;
             }
