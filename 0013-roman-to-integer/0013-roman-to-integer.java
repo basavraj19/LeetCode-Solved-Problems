@@ -3,18 +3,18 @@ class Solution {
             Map.of('I', 1, 'V', 5, 'X', 10, 'L', 50, 'C', 100, 'D', 500, 'M', 1000));
 
     public int romanToInt(String s) {
-        int nums = map.get(s.charAt(s.length() - 1));
+        int ans = map.get(s.charAt(s.length() - 1));
 
         for (int i = s.length() - 2; i >= 0; i--) {
-            int temp1 = map.get(s.charAt(i));
-            int temp2 = map.get(s.charAt(i + 1));
-
-            if (temp1 >= temp2) {
-                nums += temp1;
+            int val = map.get(s.charAt(i));
+            int nextVal = map.get(s.charAt(i + 1));
+            if (nextVal > val) {
+                ans -= val;
             } else {
-                nums -= temp1;
+                ans += val;
             }
         }
-        return nums;
+
+        return ans;
     }
 }
