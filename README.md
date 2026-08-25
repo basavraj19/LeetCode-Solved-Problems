@@ -59,6 +59,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0008-string-to-integer-atoi](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0008-string-to-integer-atoi/) | Medium |
 | [0013-roman-to-integer](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0013-roman-to-integer/) | Easy |
 | [0014-longest-common-prefix](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0014-longest-common-prefix/) | Easy |
@@ -122,6 +123,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0015-3sum](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0015-3sum/) | Medium |
 | [0018-4sum](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0018-4sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
@@ -163,6 +165,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0042-trapping-rain-water](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0042-trapping-rain-water/) | Hard |
 | [0053-maximum-subarray](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0053-maximum-subarray/) | Medium |
 | [0118-pascals-triangle](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0118-pascals-triangle/) | Easy |
@@ -265,4 +268,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0451-sort-characters-by-frequency](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0451-sort-characters-by-frequency/) | Medium |
+## Manacher
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0005-longest-palindromic-substring/) | Medium |
 <!---LeetCode Topics End-->
