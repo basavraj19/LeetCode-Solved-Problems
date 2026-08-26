@@ -1,7 +1,6 @@
 class Solution {
     public String longestPalindrome(String s) {
-        StringBuilder ans = new StringBuilder();
-
+        int start = 0, end = 0;
         for (int i = 0; i < s.length(); i++) {
             int l = i, r = i + 1;
             while (l >= 0 && r < s.length()) {
@@ -11,10 +10,10 @@ class Solution {
                 l--;
                 r++;
             }
-            
-            if ((r - l - 1) > ans.length()) {
-                ans = new StringBuilder();
-                ans.append(s, l + 1, r);
+
+            if ((r - l - 1) > end - start) {
+                start = l + 1;
+                end = r;
             }
 
             l = i - 1;
@@ -27,12 +26,12 @@ class Solution {
                 r++;
             }
 
-            if ((r - l - 1)  > ans.length()) {
-                ans = new StringBuilder();
-                ans.append(s, l + 1, r);
+            if ((r - l - 1) > end - start) {
+                start = l + 1;
+                end = r;
             }
         }
 
-        return ans.toString();
+        return s.substring(start, end);
     }
 }
