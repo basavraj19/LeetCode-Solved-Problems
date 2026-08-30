@@ -2,21 +2,18 @@ class Solution {
     public int beautySum(String s) {
         int ans = 0;
         for (int i = 0; i < s.length(); i++) {
+            int a[] = new int[26];
             for (int j = i; j < s.length(); j++) {
-                ans += getBeautyOfSubstring(s, i, j);
+                int temp = s.charAt(j) - 'a';
+                a[temp]++;
+                ans += getBeautyOfSubstring(a);
             }
         }
 
         return ans;
     }
 
-    private int getBeautyOfSubstring(String s, int low, int high) {
-        int a[] = new int[26];
-        for (int i = low; i <= high; i++) {
-            int temp = s.charAt(i) - 'a';
-            a[temp]++;
-        }
-
+    private int getBeautyOfSubstring(int a[]) {
         int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
 
         for (int i = 0; i < 26; i++) {
@@ -26,7 +23,6 @@ class Solution {
             min = Math.min(min, a[i]);
             max = Math.max(max, a[i]);
         }
-
         return max - min;
     }
 }
