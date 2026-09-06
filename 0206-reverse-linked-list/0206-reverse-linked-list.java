@@ -13,17 +13,18 @@ class Solution {
         if (head == null || head.next == null) {
             return head;
         }
+        return reverse(head, null);
+    }
 
-        ListNode temp = head;
-        ListNode prev = null;
-
-        while (temp != null) {
-            ListNode cur = temp;
-            temp = temp.next;
-            cur.next = prev;
-            prev = cur;
+    public ListNode reverse(ListNode temp, ListNode prev) {
+        if (temp == null) {
+            return prev;
         }
 
-        return prev;
+        ListNode cur = temp;
+        temp = temp.next;
+        cur.next = prev;
+
+        return reverse(temp, cur);
     }
 }
