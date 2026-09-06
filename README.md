@@ -96,6 +96,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0013-roman-to-integer](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0013-roman-to-integer/) | Easy |
 | [0073-set-matrix-zeroes](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/0073-set-matrix-zeroes) |
 | [0128-longest-consecutive-sequence](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0141-linked-list-cycle](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0141-linked-list-cycle/) | Easy |
 | [0169-majority-element](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0169-majority-element/) | Easy |
 | [0205-isomorphic-strings](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0205-isomorphic-strings/) | Easy |
 | [0229-majority-element-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0229-majority-element-ii/) | Medium |
@@ -133,6 +134,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0042-trapping-rain-water](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0042-trapping-rain-water/) | Hard |
 | [0075-sort-colors](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0075-sort-colors/) | Medium |
 | [0088-merge-sorted-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0088-merge-sorted-array/) | Easy |
+| [0141-linked-list-cycle](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0141-linked-list-cycle/) | Easy |
 | [0151-reverse-words-in-a-string](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0151-reverse-words-in-a-string/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0189-rotate-array](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0189-rotate-array/) | Medium |
@@ -279,6 +281,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0141-linked-list-cycle](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0141-linked-list-cycle/) | Easy |
 | [0206-reverse-linked-list](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0206-reverse-linked-list/) | Easy |
 | [0237-delete-node-in-a-linked-list](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0237-delete-node-in-a-linked-list/) | Medium |
 | [0876-middle-of-the-linked-list](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0876-middle-of-the-linked-list/) | Easy |
@@ -286,4 +289,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0206-reverse-linked-list](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0206-reverse-linked-list/) | Easy |
+## Floyd's Cycle Finding Algorithm
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0141-linked-list-cycle](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0141-linked-list-cycle/) | Easy |
 <!---LeetCode Topics End-->
