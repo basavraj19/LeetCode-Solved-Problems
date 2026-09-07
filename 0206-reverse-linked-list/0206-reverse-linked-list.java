@@ -15,16 +15,15 @@ class Solution {
         }
 
         ListNode temp = head;
-        ListNode newHead = null;
+        ListNode prev = null;
 
         while (temp != null) {
-            ListNode cur = new ListNode();
-            cur.val = temp.val;
-            cur.next = newHead;
-            newHead = cur;
+            ListNode cur = temp;
             temp = temp.next;
+            cur.next = prev;
+            prev = cur;
         }
 
-        return newHead;
+        return prev;
     }
 }
