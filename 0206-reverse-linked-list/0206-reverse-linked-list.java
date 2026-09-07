@@ -13,18 +13,22 @@ class Solution {
         if (head == null || head.next == null) {
             return head;
         }
-        return reverse(head, null);
-    }
 
-    public ListNode reverse(ListNode temp, ListNode prev) {
-        if (temp == null) {
-            return prev;
+        Stack<Integer> stack = new Stack<>();
+
+        ListNode temp = head;
+        while (temp != null) {
+            stack.push(temp.val);
+            temp = temp.next;
         }
 
-        ListNode cur = temp;
-        temp = temp.next;
-        cur.next = prev;
+        temp = head;
+        while (temp != null) {
+            temp.val = stack.peek();
+            stack.pop();
+            temp = temp.next;
+        }
 
-        return reverse(temp, cur);
+        return head;
     }
 }
