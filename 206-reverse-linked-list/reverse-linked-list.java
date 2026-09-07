@@ -14,21 +14,17 @@ class Solution {
             return head;
         }
 
-        Stack<Integer> stack = new Stack<>();
-
         ListNode temp = head;
+        ListNode newHead = null;
+
         while (temp != null) {
-            stack.push(temp.val);
+            ListNode cur = new ListNode();
+            cur.val = temp.val;
+            cur.next = newHead;
+            newHead = cur;
             temp = temp.next;
         }
 
-        temp = head;
-        while (temp != null) {
-            temp.val = stack.peek();
-            stack.pop();
-            temp = temp.next;
-        }
-
-        return head;
+        return newHead;
     }
 }
