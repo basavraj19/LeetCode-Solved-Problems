@@ -14,16 +14,17 @@ class Solution {
             return head;
         }
 
-        ListNode temp = head;
-        ListNode prev = null;
+        return reverse(head, null);
+    }
 
-        while (temp != null) {
-            ListNode cur = temp;
-            temp = temp.next;
-            cur.next = prev;
-            prev = cur;
+    public ListNode reverse(ListNode cur, ListNode prev){
+        if(cur == null) {
+            return prev;
         }
 
-        return prev;
+        ListNode temp = cur.next;
+        cur.next = prev;
+
+        return reverse(temp, cur);
     }
 }
