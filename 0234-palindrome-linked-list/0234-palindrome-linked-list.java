@@ -14,27 +14,36 @@ class Solution {
             return true;
         }
 
-        List<Integer> arr = new ArrayList<>();
-        ListNode temp = head;
-
-        while (temp != null) {
-            arr.add(temp.val);
-            temp = temp.next;
+        ListNode slow = head;
+        ListNode fast = head;
+        ListNode prev = null;
+        int count = 0;
+        while (fast != null && fast.next != null) {
+            ListNode cur = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+            cur.next = prev;
+            prev = cur;
         }
 
-        return checkPalindrome(arr);
-    }
-
-    private boolean checkPalindrome(List<Integer> arr) {
-        int low = 0, high = arr.size()-1;
-        while (low <= high) {
-            if (arr.get(low) != arr.get(high)) {
-                return false;
+        if (fast == null) {
+            while (prev != null && slow != null) {
+                if (prev.val != slow.val) {
+                    return false;
+                }
+                prev = prev.next;
+                slow = slow.next;
             }
-            low++;
-            high--;
+        } else {
+            slow = slow.next;
+            while (prev != null && slow != null) {
+                if (prev.val != slow.val) {
+                    return false;
+                }
+                prev = prev.next;
+                slow = slow.next;
+            }
         }
-
         return true;
     }
 }
