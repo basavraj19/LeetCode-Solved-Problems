@@ -14,46 +14,25 @@ class Solution {
             return head;
         }
 
-        ListNode newHead = new ListNode();
-        ListNode node = head;
-        ListNode prev = null;
+        List<Integer> arr = new ArrayList<>();
+        ListNode temp = head;
 
-        while (node != null && node.next != null) {
-            ListNode temp = new ListNode();
-            temp.val = node.val;
-            temp.next = null;
-            if (node == head) {
-                newHead = temp;
+        while (temp != null) {
+            arr.add(temp.val);
+            temp = temp.next;
+        }
+        int i = 0;
+        temp = head;
+        while (temp != null) {
+            temp.val = arr.get(i);
+            temp = temp.next;
+            if (i >= arr.size()-2) {
+                i = 1;
             } else {
-                prev.next = temp;
+                i += 2;
             }
-            prev = temp;
-            node = node.next.next;
         }
 
-        if (node != null) {
-            ListNode temp = new ListNode();
-            temp.val = node.val;
-            temp.next = null;
-            prev.next = temp;
-            prev = temp;
-        }
-
-        node = head.next;
-        while (node != null && node.next != null) {
-            ListNode temp = new ListNode();
-            temp.val = node.val;
-            prev.next = temp;
-            prev = temp;
-            node = node.next.next;
-        }
-        if (node != null) {
-            ListNode temp = new ListNode();
-            temp.val = node.val;
-            temp.next = null;
-            prev.next = temp;
-            prev = temp;
-        }
-        return newHead;
+        return head;
     }
 }
