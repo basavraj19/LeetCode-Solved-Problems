@@ -17,7 +17,7 @@ class Solution {
         ListNode slow = head;
         ListNode fast = head;
         ListNode prev = null;
-        int count = 0;
+
         while (fast != null && fast.next != null) {
             ListNode cur = slow;
             slow = slow.next;
@@ -27,23 +27,20 @@ class Solution {
         }
 
         if (fast == null) {
-            while (prev != null && slow != null) {
-                if (prev.val != slow.val) {
-                    return false;
-                }
-                prev = prev.next;
-                slow = slow.next;
-            }
-        } else {
-            slow = slow.next;
-            while (prev != null && slow != null) {
-                if (prev.val != slow.val) {
-                    return false;
-                }
-                prev = prev.next;
-                slow = slow.next;
-            }
+            return checkPalindrom(prev, slow);
         }
+        return checkPalindrom(prev, slow.next);
+    }
+
+    private boolean checkPalindrom(ListNode left, ListNode right) {
+        while (left != null && right != null) {
+            if (left.val != right.val) {
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+
         return true;
     }
 }
