@@ -35,12 +35,28 @@ class Solution {
     private boolean checkPalindrom(ListNode left, ListNode right) {
         while (left != null && right != null) {
             if (left.val != right.val) {
+                reverse(left, right);
                 return false;
             }
             left = left.next;
             right = right.next;
         }
-
+        reverse(left, right);
         return true;
+    }
+
+    private void reverse(ListNode left, ListNode right) {
+        ListNode temp = left;
+        ListNode prev = right;
+        while (temp != null) {
+            ListNode cur = temp;
+            temp = temp.next;
+            cur.next = prev;
+            prev = cur;
+        }
+        while (prev != null) {
+            System.out.println(prev.val);
+            prev = prev.next;
+        }
     }
 }
