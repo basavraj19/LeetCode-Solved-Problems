@@ -47,7 +47,6 @@ class Solution {
             prev = temp;
             node = node.next.next;
         }
-
         if (node != null) {
             ListNode temp = new ListNode();
             temp.val = node.val;
