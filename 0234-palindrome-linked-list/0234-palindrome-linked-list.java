@@ -21,17 +21,15 @@ class Solution {
             slow = slow.next;
             fast = fast.next.next;
         }
-
-        ListNode left = head;
-        ListNode right = reverse(slow.next);
-
-        while (right != null) {
-            if (left.val != right.val) {
+        ListNode secHead = reverse(slow.next);
+        fast = head;
+        while (secHead != null) {
+            if (fast.val != secHead.val) {
                 reverse(slow.next);
                 return false;
             }
-            left = left.next;
-            right = right.next;
+            fast = fast.next;
+            secHead = secHead.next;
         }
         reverse(slow.next);
         return true;
@@ -45,7 +43,6 @@ class Solution {
             cur.next = prev;
             prev = cur;
         }
-
         return prev;
     }
 }
