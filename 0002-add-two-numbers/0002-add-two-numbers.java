@@ -17,51 +17,27 @@ class Solution {
         ListNode temp = null;
         int remainder = 0;
 
-        while (temp1 != null && temp2 != null) {
-            int sum = temp1.val + temp2.val + remainder;
-            int digit = sum % 10;
-            remainder = sum / 10;
-            ListNode curNode = new ListNode(digit);
-            if (head == null) {
-                head = curNode;
-            } else {
-                temp.next = curNode;
+        while (temp1 != null || temp2 != null || remainder == 1) {
+            int sum = remainder;
+            if (temp1 != null) {
+                sum += temp1.val;
+                temp1 = temp1.next;
             }
-            temp = curNode;
-            temp1 = temp1.next;
-            temp2 = temp2.next;
-        }
 
-        while (temp1 != null) {
-            int sum = temp1.val + remainder;
-            int digit = sum % 10;
-            remainder = sum / 10;
-            ListNode curNode = new ListNode(digit);
-            if (head == null) {
-                head = curNode;
-            } else {
-                temp.next = curNode;
+            if (temp2 != null) {
+                sum += temp2.val;
+                temp2 = temp2.next;
             }
-            temp = curNode;
-            temp1 = temp1.next;
-        }
 
-        while (temp2 != null) {
-            int sum = temp2.val + remainder;
-            int digit = sum % 10;
+            ListNode curNode = new ListNode(sum % 10);
             remainder = sum / 10;
-            ListNode curNode = new ListNode(digit);
+
             if (head == null) {
                 head = curNode;
             } else {
                 temp.next = curNode;
             }
             temp = curNode;
-            temp2 = temp2.next;
-        }
-        if (remainder > 0) {
-            ListNode curNode = new ListNode(remainder);
-            temp.next = curNode;
         }
         return head;
     }
