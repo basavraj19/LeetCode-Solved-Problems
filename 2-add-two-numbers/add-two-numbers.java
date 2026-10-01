@@ -22,7 +22,6 @@ class Solution {
             int digit = sum % 10;
             remainder = sum / 10;
             ListNode curNode = new ListNode(digit);
-            curNode.next = null;
             if (head == null) {
                 head = curNode;
             } else {
@@ -38,7 +37,6 @@ class Solution {
             int digit = sum % 10;
             remainder = sum / 10;
             ListNode curNode = new ListNode(digit);
-            curNode.next = null;
             if (head == null) {
                 head = curNode;
             } else {
@@ -53,7 +51,6 @@ class Solution {
             int digit = sum % 10;
             remainder = sum / 10;
             ListNode curNode = new ListNode(digit);
-            curNode.next = null;
             if (head == null) {
                 head = curNode;
             } else {
@@ -64,12 +61,7 @@ class Solution {
         }
         if (remainder > 0) {
             ListNode curNode = new ListNode(remainder);
-            curNode.next = null;
-            if (head == null) {
-                head = curNode;
-            } else {
-                temp.next = curNode;
-            }
+            temp.next = curNode;
         }
         return head;
     }
