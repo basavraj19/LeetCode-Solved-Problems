@@ -22,9 +22,9 @@ class Solution {
             temp = temp.next.next;
         }
 
-if(temp!=null){
- arr.add(temp.val);
-}
+        if (temp != null) {
+            arr.add(temp.val);
+        }
         temp = head.next;
 
         while (temp != null && temp.next != null) {
@@ -32,9 +32,9 @@ if(temp!=null){
             temp = temp.next.next;
         }
 
-if(temp!=null){
- arr.add(temp.val);
-}
+        if (temp != null) {
+            arr.add(temp.val);
+        }
         temp = head;
         int i = 0;
         while (temp != null) {
