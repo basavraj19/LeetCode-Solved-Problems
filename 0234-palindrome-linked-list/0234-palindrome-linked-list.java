@@ -13,36 +13,46 @@ class Solution {
         if (head == null || head.next == null) {
             return true;
         }
-
         ListNode slow = head;
         ListNode fast = head;
+        ListNode prev = null;
 
-        while (fast.next != null && fast.next.next != null) {
+        while (fast != null && fast.next != null) {
+            prev = slow;
             slow = slow.next;
             fast = fast.next.next;
         }
-        ListNode secHead = reverse(slow.next);
-        fast = head;
-        while (secHead != null) {
-            if (fast.val != secHead.val) {
-                reverse(slow.next);
+
+        ListNode newHead = reverse(prev.next);
+        prev.next = null;
+        slow = head;
+        fast = newHead;
+
+        while (slow != null) {
+            if (slow.val != fast.val) {
                 return false;
             }
+            slow = slow.next;
             fast = fast.next;
-            secHead = secHead.next;
         }
-        reverse(slow.next);
         return true;
     }
 
-    private ListNode reverse(ListNode temp) {
+    private ListNode reverse(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode temp = head;
         ListNode prev = null;
+
         while (temp != null) {
             ListNode cur = temp;
             temp = temp.next;
             cur.next = prev;
             prev = cur;
         }
+
         return prev;
     }
 }
