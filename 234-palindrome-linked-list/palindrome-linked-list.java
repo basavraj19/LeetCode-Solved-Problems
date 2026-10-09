@@ -30,11 +30,13 @@ class Solution {
 
         while (slow != null) {
             if (slow.val != fast.val) {
+                prev.next = reverse(newHead);
                 return false;
             }
             slow = slow.next;
             fast = fast.next;
         }
+        prev.next = reverse(newHead);
         return true;
     }
 
