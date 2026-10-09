@@ -31,12 +31,14 @@ class Solution {
         while (slow != null) {
             if (slow.val != fast.val) {
                 prev.next = reverse(newHead);
+                   print(head);
                 return false;
             }
             slow = slow.next;
             fast = fast.next;
         }
         prev.next = reverse(newHead);
+        print(head);
         return true;
     }
 
@@ -56,5 +58,12 @@ class Solution {
         }
 
         return prev;
+    }
+
+      public void print(ListNode head){
+        while(head!=null){
+            System.out.println(head.val);
+            head = head.next;
+        }
     }
 }
