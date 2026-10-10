@@ -16,11 +16,10 @@ public class Solution {
         }
 
         ListNode temp = headA;
-
         while (temp != null) {
             ListNode cur = headB;
             while (cur != null) {
-                if (cur == temp) {
+                if (temp == cur) {
                     return temp;
                 }
                 cur = cur.next;
