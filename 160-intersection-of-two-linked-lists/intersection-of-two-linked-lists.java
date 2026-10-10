@@ -15,42 +15,20 @@ public class Solution {
             return null;
         }
 
-        ListNode tempA = headA;
-        ListNode tempB = headB;
-        int lenA = 0, lenB = 0;
+        ListNode temp = headA;
+        Map<ListNode, Integer> map = new HashMap<>();
 
-        while (tempA != null || tempB != null) {
-            if (tempA != null) {
-                tempA = tempA.next;
-                lenA++;
-            }
-
-            if (tempB != null) {
-                tempB = tempB.next;
-                lenB++;
-            }
+        while (temp != null) {
+            map.put(temp, 1);
+            temp = temp.next;
         }
 
-        tempA = headA;
-        tempB = headB;
-
-        if (lenA > lenB) {
-            for (int i = 0; i < lenA - lenB; i++) {
-                tempA = tempA.next;
+        temp = headB;
+        while (temp != null) {
+            if (map.containsKey(temp)) {
+                return temp;
             }
-        } else {
-
-            for (int i = 0; i < lenB - lenA; i++) {
-                tempB = tempB.next;
-            }
-        }
-
-        while (tempA != null && tempB != null) {
-            if (tempA == tempB) {
-                return tempA;
-            }
-            tempA = tempA.next;
-            tempB = tempB.next;
+            temp = temp.next;
         }
         return null;
     }
