@@ -15,18 +15,43 @@ public class Solution {
             return null;
         }
 
-        ListNode temp = headA;
-        while (temp != null) {
-            ListNode cur = headB;
-            while (cur != null) {
-                if (temp == cur) {
-                    return temp;
-                }
-                cur = cur.next;
+        ListNode tempA = headA;
+        ListNode tempB = headB;
+        int lenA = 0, lenB = 0;
+
+        while (tempA != null || tempB != null) {
+            if (tempA != null) {
+                tempA = tempA.next;
+                lenA++;
             }
-            temp = temp.next;
+
+            if (tempB != null) {
+                tempB = tempB.next;
+                lenB++;
+            }
         }
 
+        tempA = headA;
+        tempB = headB;
+
+        if (lenA > lenB) {
+            for (int i = 0; i < lenA - lenB; i++) {
+                tempA = tempA.next;
+            }
+        } else {
+
+            for (int i = 0; i < lenB - lenA; i++) {
+                tempB = tempB.next;
+            }
+        }
+
+        while (tempA != null && tempB != null) {
+            if (tempA == tempB) {
+                return tempA;
+            }
+            tempA = tempA.next;
+            tempB = tempB.next;
+        }
         return null;
     }
 }
