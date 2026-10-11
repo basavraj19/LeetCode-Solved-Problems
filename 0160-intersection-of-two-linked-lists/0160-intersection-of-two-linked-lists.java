@@ -15,21 +15,23 @@ public class Solution {
             return null;
         }
 
-        ListNode temp = headA;
-        Map<ListNode, Integer> map = new HashMap<>();
+        ListNode tempA = headA;
+        ListNode tempB = headB;
 
-        while (temp != null) {
-            map.put(temp, 1);
-            temp = temp.next;
-        }
+        while (tempA != tempB) {
+            tempA = tempA.next;
+            tempB = tempB.next;
 
-        temp = headB;
-        while (temp != null) {
-            if (map.containsKey(temp)) {
-                return temp;
+            if (tempA == tempB) {
+                return tempA;
             }
-            temp = temp.next;
+
+            if (tempA == null)
+                tempA = headB;
+            if (tempB == null)
+                tempB = headA;
         }
-        return null;
+
+        return tempA;
     }
 }
