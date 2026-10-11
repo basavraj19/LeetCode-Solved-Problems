@@ -14,16 +14,15 @@ public class Solution {
         if (head == null || head.next == null) {
             return false;
         }
+        ListNode temp = head;
+        Map<ListNode, Integer> map = new HashMap<>();
 
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-            if (slow == fast) {
+        while (temp != null) {
+            if (map.containsKey(temp)) {
                 return true;
             }
+            map.put(temp, 1);
+            temp = temp.next;
         }
 
         return false;
