@@ -21,29 +21,18 @@ class Solution {
 
         ListNode temp1 = list1;
         ListNode temp2 = list2;
-        ListNode temp = null;
-        ListNode head = null;
+        ListNode temp = new ListNode(-1);
+        ListNode head = temp;
 
         while (temp1 != null && temp2 != null) {
             if (temp1.val <= temp2.val) {
-                if (head == null) {
-                    head = temp1;
-                    temp = head;
-                } else {
-                    temp.next = temp1;
-                    temp = temp.next;
-                }
+                temp.next = temp1;
                 temp1 = temp1.next;
             } else {
-                if (head == null) {
-                    head = temp2;
-                    temp = head;
-                } else {
-                    temp.next = temp2;
-                    temp = temp.next;
-                }
+                temp.next = temp2;
                 temp2 = temp2.next;
             }
+            temp = temp.next;
         }
 
         if (temp1 != null) {
@@ -52,7 +41,7 @@ class Solution {
         if (temp2 != null) {
             temp.next = temp2;
         }
-
+        head = head.next;
         return head;
     }
 }
