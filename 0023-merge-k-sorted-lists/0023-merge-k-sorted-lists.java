@@ -13,57 +13,33 @@ class Solution {
         if (lists == null || lists.length == 0) {
             return null;
         }
-        ListNode head = lists[0];
-        for (int i = 1; i < lists.length; i++) {
-            head = merge(head, lists[i]);
-        }
 
-        return head;
-    }
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> Integer.compare(a.val, b.val));
 
-    private ListNode merge(ListNode head, ListNode list) {
-        if (head == null) {
-            return list;
-        }
-
-        if (list == null) {
-            return head;
-        }
-        ListNode newHead = null;
-        ListNode temp1 = head;
-        ListNode temp2 = list;
-        ListNode temp = null;
-
-        while (temp1 != null && temp2 != null) {
-            if (temp1.val < temp2.val) {
-                if (newHead == null) {
-                    newHead = temp1;
-                    temp = temp1;
-                } else {
-                    temp.next = temp1;
-                    temp = temp.next;
-                }
-                temp1 = temp1.next;
-            } else {
-                if (newHead == null) {
-                    newHead = temp2;
-                    temp = temp2;
-                } else {
-                    temp.next = temp2;
-                    temp = temp.next;
-                }
-                temp2 = temp2.next;
+        for (int i = 0; i < lists.length; i++) {
+            if (lists[i] != null) {
+                pq.offer(lists[i]);
             }
         }
 
-        if (temp1 != null) {
-            temp.next = temp1;
+        ListNode head = null;
+        ListNode temp = null;
+
+        while (!pq.isEmpty()) {
+            ListNode cur = pq.poll();
+            if (head == null) {
+                head = cur;
+                temp = cur;
+            } else {
+                temp.next = cur;
+                temp = temp.next;
+            }
+
+            if (cur.next != null) {
+                pq.offer(cur.next);
+            }
         }
 
-        if (temp2 != null) {
-            temp.next = temp2;
-        }
-
-        return newHead;
+        return head;
     }
 }
