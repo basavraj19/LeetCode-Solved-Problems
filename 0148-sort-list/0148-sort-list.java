@@ -14,9 +14,8 @@ class Solution {
             return head;
         }
 
-        List<Integer> arr = new ArrayList<>();
         ListNode temp = head;
-        int i = 0;
+        List<Integer> arr = new ArrayList<>();
         while (temp != null) {
             arr.add(temp.val);
             temp = temp.next;
@@ -24,11 +23,12 @@ class Solution {
 
         Collections.sort(arr);
         temp = head;
+        int i = 0;
         while (temp != null) {
-            temp.val = arr.get(i);
-            i++;
+            temp.val = arr.get(i++);
             temp = temp.next;
         }
+
         return head;
     }
 }
