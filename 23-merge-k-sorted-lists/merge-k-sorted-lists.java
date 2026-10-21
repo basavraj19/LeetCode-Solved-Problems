@@ -13,29 +13,31 @@ class Solution {
         if (lists == null || lists.length == 0) {
             return null;
         }
-        ListNode head = null;
-        ListNode prev = null;
-        List<Integer> arr = new ArrayList<>();
+
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> Integer.compare(a.val, b.val));
+
         for (int i = 0; i < lists.length; i++) {
-            ListNode temp = lists[i];
-            if (head == null) {
-                head = lists[i];
-            }
-            if (prev != null) {
-                prev.next = temp;
-            }
-            while (temp != null) {
-                arr.add(temp.val);
-                prev = temp;
-                temp = temp.next;
+            if (lists[i] != null) {
+                pq.offer(lists[i]);
             }
         }
-        Collections.sort(arr);
-        ListNode temp = head;
-        int i = 0;
-        while (temp != null) {
-            temp.val = arr.get(i++);
-            temp = temp.next;
+
+        ListNode head = null;
+        ListNode temp = null;
+
+        while (!pq.isEmpty()) {
+            ListNode cur = pq.poll();
+            if (head == null) {
+                head = cur;
+                temp = cur;
+            } else {
+                temp.next = cur;
+                temp = temp.next;
+            }
+
+            if (cur.next != null) {
+                pq.offer(cur.next);
+            }
         }
 
         return head;
