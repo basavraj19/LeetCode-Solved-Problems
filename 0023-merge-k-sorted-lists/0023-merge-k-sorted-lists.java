@@ -10,20 +10,23 @@
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        List<Integer> arr = new ArrayList<>();
+        if (lists == null || lists.length == 0) {
+            return null;
+        }
         ListNode head = null;
         ListNode prev = null;
+        List<Integer> arr = new ArrayList<>();
         for (int i = 0; i < lists.length; i++) {
             ListNode temp = lists[i];
             if (head == null) {
-                head = temp;
+                head = lists[i];
             }
             if (prev != null) {
                 prev.next = temp;
             }
             while (temp != null) {
-                prev = temp;
                 arr.add(temp.val);
+                prev = temp;
                 temp = temp.next;
             }
         }
@@ -31,9 +34,8 @@ class Solution {
         ListNode temp = head;
         int i = 0;
         while (temp != null) {
-            temp.val = arr.get(i);
+            temp.val = arr.get(i++);
             temp = temp.next;
-            i++;
         }
 
         return head;
