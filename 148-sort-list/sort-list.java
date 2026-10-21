@@ -14,43 +14,30 @@ class Solution {
             return head;
         }
 
-        ListNode temp = head;
-        int len = 0;
-        while (temp != null && temp.next != null) {
-            len += 2;
-            temp = temp.next.next;
-        }
-        if (temp != null) {
-            len++;
-        }
+        ListNode middle = findMiddle(head);
+        ListNode rightHead = middle.next;
+        middle.next = null;
 
-        return sort(head, 0, len - 1);
+        head = sortList(head);
+        rightHead = sortList(rightHead);
+
+        return merge(head, rightHead);
     }
 
-    private ListNode sort(ListNode head, int l, int h) {
-        if (l >= h) {
+    private ListNode findMiddle(ListNode head) {
+        if (head == null || head.next == null) {
             return head;
         }
 
-        int mid = (l + h) / 2;
-        ListNode secHead = head;
-        ListNode prev = null;
-        int counter = mid;
+        ListNode slow = head;
+        ListNode fast = head.next.next;
 
-        while (secHead != null && counter >= l) {
-            counter--;
-            prev = secHead;
-            secHead = secHead.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
 
-        if (prev != null) {
-            prev.next = null;
-        }
-
-        head = sort(head, l, mid);
-        secHead = sort(secHead, mid + 1, h);
-
-        return merge(head, secHead);
+        return slow;
     }
 
     private ListNode merge(ListNode head1, ListNode head2) {
