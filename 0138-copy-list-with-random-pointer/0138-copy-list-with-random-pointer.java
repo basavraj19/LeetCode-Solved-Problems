@@ -22,8 +22,6 @@ class Solution {
         Node newHead = null;
         Node mover = null;
         Node temp = head;
-        Map<Node, Node> map = new HashMap<>();
-        map.put(null, null);
 
         while (temp != null) {
             Node newNode = new Node(temp.val);
@@ -35,7 +33,6 @@ class Solution {
                 mover.next = newNode;
                 mover = mover.next;
             }
-            map.put(temp, newNode);
             temp = temp.next;
         }
 
@@ -43,11 +40,30 @@ class Solution {
         mover = newHead;
 
         while (temp != null) {
-            mover.random = map.get(temp.random);
+            mover.random = getRandom(head, newHead, temp.random);
             mover = mover.next;
             temp = temp.next;
         }
 
         return newHead;
+    }
+
+    private Node getRandom(Node head1, Node head2, Node random) {
+        if (head1 == random) {
+            return head2;
+        }
+
+        Node temp = head1;
+        Node mover = head2;
+
+        while (temp != null) {
+            if (temp == random) {
+                return mover;
+            }
+            temp = temp.next;
+            mover = mover.next;
+        }
+
+        return null;
     }
 }
