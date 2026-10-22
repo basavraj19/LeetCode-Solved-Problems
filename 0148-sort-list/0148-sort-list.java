@@ -15,13 +15,13 @@ class Solution {
         }
 
         ListNode middle = findMiddle(head);
-        ListNode rightHead = middle.next;
+        ListNode secHead = middle.next;
         middle.next = null;
 
         head = sortList(head);
-        rightHead = sortList(rightHead);
+        secHead = sortList(secHead);
 
-        return merge(head, rightHead);
+        return merge(head, secHead);
     }
 
     private ListNode findMiddle(ListNode head) {
@@ -44,35 +44,26 @@ class Solution {
         if (head1 == null) {
             return head2;
         }
+
         if (head2 == null) {
             return head1;
         }
 
-        ListNode newHead = null;
+        ListNode newHead = new ListNode(-1);
         ListNode temp1 = head1;
         ListNode temp2 = head2;
-        ListNode temp = null;
+        ListNode temp = newHead;
 
         while (temp1 != null && temp2 != null) {
             if (temp1.val < temp2.val) {
-                if (newHead == null) {
-                    newHead = temp1;
-                    temp = temp1;
-                } else {
-                    temp.next = temp1;
-                    temp = temp.next;
-                }
+                temp.next = temp1;
                 temp1 = temp1.next;
             } else {
-                if (newHead == null) {
-                    newHead = temp2;
-                    temp = temp2;
-                } else {
-                    temp.next = temp2;
-                    temp = temp.next;
-                }
+                temp.next = temp2;
                 temp2 = temp2.next;
             }
+
+            temp = temp.next;
         }
 
         if (temp1 != null) {
@@ -83,6 +74,6 @@ class Solution {
             temp.next = temp2;
         }
 
-        return newHead;
+        return newHead.next;
     }
 }
