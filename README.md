@@ -96,6 +96,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0013-roman-to-integer](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0013-roman-to-integer/) | Easy |
 | [0073-set-matrix-zeroes](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/master/0073-set-matrix-zeroes) |
 | [0128-longest-consecutive-sequence](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0138-copy-list-with-random-pointer](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0138-copy-list-with-random-pointer/) | Medium |
 | [0141-linked-list-cycle](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0160-intersection-of-two-linked-lists](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0160-intersection-of-two-linked-lists/) | Easy |
@@ -304,6 +305,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0023-merge-k-sorted-lists](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0023-merge-k-sorted-lists/) | Hard |
 | [0025-reverse-nodes-in-k-group](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0025-reverse-nodes-in-k-group/) | Hard |
 | [0061-rotate-list](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0061-rotate-list/) | Medium |
+| [0138-copy-list-with-random-pointer](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0138-copy-list-with-random-pointer/) | Medium |
 | [0141-linked-list-cycle](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0148-sort-list](https://github.com/basavraj19/LeetCode-Solved-Problems/tree/main/0148-sort-list/) | Medium |
