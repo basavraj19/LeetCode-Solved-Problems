@@ -18,17 +18,13 @@ class Solution {
         if (head == null) {
             return head;
         }
-        
+
         Node newHead = null;
         Node mover = null;
         Node temp = head;
 
-        Map<Node, Node> map = new HashMap<>();
-        map.put(null, null);
-
         while (temp != null) {
             Node cur = new Node(temp.val);
-            map.put(temp, cur);
 
             if (newHead == null) {
                 newHead = cur;
@@ -44,11 +40,26 @@ class Solution {
         temp = head;
         mover = newHead;
         while (temp != null) {
-            mover.random = map.get(temp.random);
+            mover.random = getRandom(head, newHead, temp.random);
             temp = temp.next;
             mover = mover.next;
         }
 
         return newHead;
+    }
+
+    public Node getRandom(Node head, Node newHead, Node random) {
+        Node temp1 = head;
+        Node temp2 = newHead;
+
+        while (temp1 != null) {
+            if (temp1 == random) {
+                return temp2;
+            }
+            temp1 = temp1.next;
+            temp2 = temp2.next;
+        }
+
+        return null;
     }
 }
