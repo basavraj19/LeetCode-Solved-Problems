@@ -18,48 +18,41 @@ class Solution {
         if (head == null) {
             return head;
         }
-
-        Node newHead = null;
-        Node mover = null;
+        
         Node temp = head;
 
         while (temp != null) {
-            Node cur = new Node(temp.val);
+            Node newNode = new Node(temp.val);
 
-            if (newHead == null) {
-                newHead = cur;
-                mover = cur;
-            } else {
-                mover.next = cur;
-                mover = mover.next;
-            }
+            newNode.next = temp.next;
+            temp.next = newNode;
 
-            temp = temp.next;
+            temp = newNode.next;
         }
 
         temp = head;
-        mover = newHead;
+
         while (temp != null) {
-            mover.random = getRandom(head, newHead, temp.random);
+            Node clonedNode = temp.next;
+
+            clonedNode.random = temp.random == null ? null : temp.random.next;
+
+            temp = clonedNode.next;
+        }
+
+        temp = head;
+        Node newHead = head.next;
+
+        while (temp != null) {
+            Node clonedNode = temp.next;
+
+            temp.next = clonedNode.next;
+
+            clonedNode.next = temp.next == null ? null : temp.next.next;
+
             temp = temp.next;
-            mover = mover.next;
         }
 
         return newHead;
-    }
-
-    public Node getRandom(Node head, Node newHead, Node random) {
-        Node temp1 = head;
-        Node temp2 = newHead;
-
-        while (temp1 != null) {
-            if (temp1 == random) {
-                return temp2;
-            }
-            temp1 = temp1.next;
-            temp2 = temp2.next;
-        }
-
-        return null;
     }
 }
